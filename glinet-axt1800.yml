@@ -42,15 +42,13 @@ packages:
   - luci-app-ramfree
   - luci-app-wol
   - luci-app-diskman
-  - luci-app-smartdns
-  - luci-app-appfilter
-  - luci-app-cpufreq
   - luci-app-turboacc
+  - luci-app-cpufreq
   - luci-app-ssr-plus
   - luci-app-ddns
+  - luci-app-smartdns
   - luci-app-ddnsto
   - luci-app-wrtbwmon
   - luci-app-serverchan
   - luci-app-transmission
-diffconfig: |
-  CONFIG_KERNEL_IPQ_MEM_PROFILE=0
+  - luci-app-appfilter
