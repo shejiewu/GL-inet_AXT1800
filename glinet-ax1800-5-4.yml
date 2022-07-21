@@ -1,0 +1,53 @@
+---
+profile: glinet_ax1800
+target: ipq807x
+subtarget: ipq60xx
+description: Build image for the GL.iNET AX1800
+image: bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_ax1800-squashfs-sysupgrade.tar
+feeds:
+  - name: ipq807x
+    path: ../../feeds/ipq807x
+  - name: gl_feeds_common
+    uri: https://github.com/gl-inet/gl-feeds.git
+    revision: 06f41ac79c434043e7dd15c3ab4bb09930ddfaf3
+  - name: luci
+    uri: https://github.com/openwrt/luci.git
+    revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
+  - name: open_app_filter
+    uri: https://github.com/destan19/OpenAppFilter.git
+    branch: oaf-5.1.0
+    revision: 04b701357c271a1bf97afa5dbfbfd02f4861aa25
+  - name: immortalwrt_luci
+    uri: https://github.com/immortalwrt/luci.git
+    branch: openwrt-21.02
+    revision: 786e681d614ca9d4da771e993e9ba12f587c036f
+  - name: kenzok8_packages
+    uri: https://github.com/kenzok8/openwrt-packages.git
+    branch: master
+    revision: 5173253721ecc1d9d5fc3a42f28189a4d2d892aa
+  - name: kenzok8_small
+    uri: https://github.com/kenzok8/small.git
+    branch: master
+    revision: ba0e907af63c5f7dff8a0a513076915a15b75b5f
+include:
+  - wifi-ax
+packages:
+  - wget-ssl
+  - luci-theme-argon
+  - luci-theme-argon
+  - luci-app-argon-config
+  - luci-app-ramfree
+  - luci-app-wol
+  - luci-app-diskman
+  - luci-app-smartdns
+  - luci-app-appfilter
+  - luci-app-cpufreq
+  - luci-app-turboacc
+  - luci-app-ssr-plus
+  - luci-app-ddns
+  - luci-app-ddnsto
+  - luci-app-wrtbwmon
+  - luci-app-serverchan
+  - luci-app-transmission
+diffconfig: |
+  CONFIG_KERNEL_IPQ_MEM_PROFILE=0
