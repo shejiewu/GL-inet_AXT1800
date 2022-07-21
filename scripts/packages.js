@@ -24,7 +24,7 @@ module.exports = [
   {
     name: 'luci-app-diskman',
     desc: '磁盘管理工具',
-
+  },
   {
     name: 'luci-app-turboacc',
     desc: 'Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)',
@@ -40,7 +40,6 @@ module.exports = [
   {
     name: 'luci-app-ddns',
     desc: '动态域名 DDNS',
-  },
   },
   {
     name: 'luci-app-smartdns',
