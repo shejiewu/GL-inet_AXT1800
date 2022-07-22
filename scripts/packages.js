@@ -62,10 +62,6 @@ module.exports = [
     desc: '过滤插件宏'
   },
   {
-    name: 'luci-app-oaf',
-    desc: 'luci-app-oaf'
-  },
-  {
     name: 'luci-compat',
     desc: 'luci-compat'
   },
