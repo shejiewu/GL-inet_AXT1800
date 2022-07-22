@@ -48,5 +48,6 @@ packages:
   - luci-app-transmission
   - luci-app-appfilter
   - luci-app-oaf
+  - luci-compat
 diffconfig: |
   CONFIG_KERNEL_IPQ_MEM_PROFILE=0

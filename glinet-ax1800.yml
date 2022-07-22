@@ -50,3 +50,4 @@ packages:
   - luci-app-transmission
   - luci-app-appfilter
   - luci-app-oaf
+  - luci-compat
