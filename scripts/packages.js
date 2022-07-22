@@ -61,6 +61,14 @@ module.exports = [
     name: 'luci-app-oaf',
     desc: '过滤插件宏'
   },
+  {
+    name: 'luci-app-oaf',
+    desc: 'luci-app-oaf'
+  },
+  {
+    name: 'luci-compat',
+    desc: 'luci-compat'
+  },
   // {
   //   name: 'luci-app-samba4',
   //   desc: 'samba4文件共享',
