@@ -26,14 +26,6 @@ module.exports = [
     desc: '磁盘管理工具',
   },
   {
-    name: 'luci-app-turboacc',
-    desc: 'Turbo ACC 网络加速(支持 Fast Path 或者 硬件 NAT)',
-  },
-  {
-    name: 'luci-app-cpufreq',
-    desc: 'CPU 性能优化调节',
-  },
-  {
     name: 'luci-app-ssr-plus',
     desc: 'ssr-plus 代理软件',
   },
