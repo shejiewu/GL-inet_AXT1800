@@ -57,6 +57,10 @@ module.exports = [
     name: 'luci-app-appfilter',
     desc: '应用过滤'
   },
+  {
+    name: 'luci-compat'
+    desc: 'luci依赖'
+  },
   // {
   //   name: 'luci-app-samba4',
   //   desc: 'samba4文件共享',
