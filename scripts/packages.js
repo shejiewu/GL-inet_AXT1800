@@ -27,7 +27,11 @@ module.exports = [
   },
   {
     name: 'luci-app-ssr-plus',
-    desc: 'ssr-plus 代理软件',
+    desc: 'ssr-plus 代理',
+  },
+  {
+    name: 'luci-app-vssr',
+    desc: 'Hello-World 代理',
   },
   {
     name: 'luci-app-ddns',
