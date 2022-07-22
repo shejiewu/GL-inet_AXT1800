@@ -24,7 +24,7 @@ feeds:
   - name: kenzok8_packages
     uri: https://github.com/kenzok8/openwrt-packages.git
     branch: master
-    revision: 31ce77ae5d9a5149e477c91898a520dc378f9a16
+    revision: d64bfb781dacd95a971e1746759874bb2570ec86
   - name: kenzok8_small
     uri: https://github.com/kenzok8/small.git
     branch: master
@@ -46,5 +46,6 @@ packages:
   - luci-app-serverchan
   - luci-app-transmission
   - luci-app-appfilter
+  - luci-app-oaf
 diffconfig: |
   CONFIG_KERNEL_IPQ_MEM_PROFILE=0
