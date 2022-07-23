@@ -58,12 +58,8 @@ module.exports = [
     desc: 'BT下载工具',
   },
   {
-    name: 'luci-app-appfilter',
-    desc: '应用过滤'
-  },
-  {
     name: 'luci-compat',
-    desc: 'luci-compat'
+    desc: '插件依赖之一'
   },
   // {
   //   name: 'luci-app-samba4',
