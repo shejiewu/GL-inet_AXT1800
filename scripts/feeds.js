@@ -7,11 +7,6 @@
 
 module.exports = [
   {
-    name: 'open_app_filter',
-    uri: 'https://github.com/destan19/OpenAppFilter.git',
-    branch: 'oaf-5.1.0',
-  },
-  {
     name: 'immortalwrt_luci',
     uri: 'https://github.com/immortalwrt/luci.git',
     branch: 'openwrt-21.02',
