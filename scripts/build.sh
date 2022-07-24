@@ -22,10 +22,10 @@ git clone https://github.com/gl-inet/gl-infra-builder.git $PWD/gl-infra-builder
 cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
 cd $PWD/gl-infra-builder
 #setup
-python3 setup.py -c config-wlan-ap-5.4.yml
+python3 setup.py -c config-wlan-ap.yml
 
 cd wlan-ap/openwrt
-./scripts/gen_config.py  $PWD/gl-infra-builder/profiles/glinet_$DEVICE glinet_depends
+./scripts/gen_config.py  $PWD/profiles/glinet-$DEVICE glinet_depends
 
 git clone https://github.com/gl-inet/glinet4.x.git -b main $PWD/glinet
 ./scripts/feeds update -a
