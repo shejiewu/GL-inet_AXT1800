@@ -20,7 +20,7 @@ feeds:
   - name: kenzok8_packages
     uri: https://github.com/kenzok8/openwrt-packages.git
     branch: master
-    revision: 55b16270a22db16a0df13674c12025739c2847fc
+    revision: d6563cd439dda4b84caede080c7e057bbcab4fb9
   - name: kenzok8_small
     uri: https://github.com/kenzok8/small.git
     branch: master
@@ -43,4 +43,5 @@ packages:
   - luci-app-wrtbwmon
   - luci-app-serverchan
   - luci-app-transmission
+  - luci-app-samba4
   - luci-compat
