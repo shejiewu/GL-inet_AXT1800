@@ -58,11 +58,11 @@ module.exports = [
     desc: 'BT下载工具',
   },
   {
-    name: 'luci-compat',
-    desc: '插件依赖之一'
-  },
-  {
     name: 'luci-app-samba4',
     desc: 'Samba4文件共享',
+  },
+  {
+    name: 'luci-compat',
+    desc: '插件依赖之一'
   },
 ];
