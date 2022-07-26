@@ -29,10 +29,10 @@ module.exports = [
     name: 'luci-app-ssr-plus',
     desc: 'SSR-Plus 代理',
   },
-  {
-    name: 'luci-app-vssr',
-    desc: 'Hello-World 代理',
-  },
+  // {
+  //   name: 'luci-app-vssr',
+  //   desc: 'Hello-World 代理',
+  // },
   {
     name: 'luci-app-ddns',
     desc: '动态域名 DDNS',
@@ -55,7 +55,7 @@ module.exports = [
   },
   {
     name: 'luci-app-transmission',
-    desc: 'BT下载工具',
+    desc: 'Transmission下载器',
   },
   {
     name: 'luci-app-samba4',
@@ -63,6 +63,6 @@ module.exports = [
   },
   {
     name: 'luci-compat',
-    desc: '插件依赖之一'
+    desc: 'Compat依赖'
   },
 ];
