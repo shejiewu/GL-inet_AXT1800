@@ -37,10 +37,10 @@ module.exports = [
     name: 'luci-app-ddns',
     desc: '动态域名 DDNS',
   },
-  {
-    name: 'luci-app-smartdns',
-    desc: 'SmartDns DNS防污染',
-  },
+  // {
+  //   name: 'luci-app-smartdns',
+  //   desc: 'SmartDns DNS防污染',
+  // },
   {
     name: 'luci-app-ddnsto',
     desc: 'DDNSTO 内网穿透',
