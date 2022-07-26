@@ -26,8 +26,8 @@ on:
     branches:
       - main
 
-  schedule:
-    - cron: 0 16 * * *
+#  schedule:
+#    - cron: 0 16 * * *
 
 env:
   REPO_URL: https://github.com/gl-inet/gl-infra-builder
@@ -149,7 +149,7 @@ jobs:
         touch release.txt
         echo "## 📦‍ 固件下载 | GLINET AX1800" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "- 🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 释放内存\n4. Wol 网络唤醒\n5. 磁盘管理工具\n6. SSR-Plus 代理\n7. 动态域名 DDNS\n8. SmartDns DNS防污染\n9. DDNSTO 内网穿透\n10. 实时流量监测\n11. 微信/Telegram推送\n12. Transmission下载器\n13. Samba4文件共享\n14. Compat依赖" >> release.txt
+        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 释放内存\n4. Wol 网络唤醒\n5. 磁盘管理工具\n6. SSR-Plus 代理\n7. 动态域名 DDNS\n8. DDNSTO 内网穿透\n9. 实时流量监测\n10. 微信/Telegram推送\n11. Transmission下载器\n12. Samba4文件共享\n13. Compat依赖" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release

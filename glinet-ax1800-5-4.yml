@@ -36,7 +36,6 @@ packages:
   - luci-app-diskman
   - luci-app-ssr-plus
   - luci-app-ddns
-  - luci-app-smartdns
   - luci-app-ddnsto
   - luci-app-wrtbwmon
   - luci-app-serverchan
