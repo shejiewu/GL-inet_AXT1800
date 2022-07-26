@@ -7,11 +7,11 @@
 module.exports = [
   {
     name: 'luci-theme-argon',
-    desc: 'argon主题',
+    desc: 'Argon主题',
   },
   {
     name: 'luci-app-argon-config',
-    desc: 'argon主题设置',
+    desc: 'Argon主题设置',
   },
   {
     name: 'luci-app-ramfree',
@@ -19,7 +19,7 @@ module.exports = [
   },
   {
     name: 'luci-app-wol',
-    desc: 'wol 网络唤醒',
+    desc: 'Wol 网络唤醒',
   },
   {
     name: 'luci-app-diskman',
@@ -27,7 +27,7 @@ module.exports = [
   },
   {
     name: 'luci-app-ssr-plus',
-    desc: 'ssr-plus 代理',
+    desc: 'SSR-Plus 代理',
   },
   {
     name: 'luci-app-vssr',
@@ -39,7 +39,7 @@ module.exports = [
   },
   {
     name: 'luci-app-smartdns',
-    desc: 'smartdns DNS防污染',
+    desc: 'SmartDns DNS防污染',
   },
   {
     name: 'luci-app-ddnsto',
@@ -61,8 +61,8 @@ module.exports = [
     name: 'luci-compat',
     desc: '插件依赖之一'
   },
-  // {
-  //   name: 'luci-app-samba4',
-  //   desc: 'samba4文件共享',
-  // },
+  {
+    name: 'luci-app-samba4',
+    desc: 'Samba4文件共享',
+  },
 ];
