@@ -19,10 +19,10 @@ on:
         required: false
         default: 'false'
 
-  push:
-    paths:
-      - '.github/workflows/${workflowName}.yml'
-      - '${build}.yml'
+#  push:
+#    paths:
+#      - '.github/workflows/${workflowName}.yml'
+#      - '${build}.yml'
     branches:
       - main
 
