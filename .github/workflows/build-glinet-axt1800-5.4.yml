@@ -19,10 +19,10 @@ on:
         required: false
         default: 'false'
 
-  push:
-    paths:
-      - '.github/workflows/build-glinet-axt1800-5.4.yml'
-      - 'glinet-axt1800-5-4.yml'
+#  push:
+#    paths:
+#      - '.github/workflows/build-glinet-axt1800-5.4.yml'
+#      - 'glinet-axt1800-5-4.yml'
     branches:
       - main
 

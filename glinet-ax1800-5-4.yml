@@ -20,11 +20,11 @@ feeds:
   - name: kenzok8_packages
     uri: https://github.com/kenzok8/openwrt-packages.git
     branch: master
-    revision: d6563cd439dda4b84caede080c7e057bbcab4fb9
+    revision: 60c1056982eed3dfbf964960f79bdd54a79f1930
   - name: kenzok8_small
     uri: https://github.com/kenzok8/small.git
     branch: master
-    revision: ba0e907af63c5f7dff8a0a513076915a15b75b5f
+    revision: 5afbe3bba9a2953f506074cc0d943580a38f589e
 include:
   - wifi-ax
 packages:
