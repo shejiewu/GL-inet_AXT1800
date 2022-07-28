@@ -18,6 +18,42 @@ module.exports = [
     desc: '磁盘管理工具',
   },
   {
+    "name": "luci-app-arpbind",
+    "desc": "IP/MAC绑定"
+  },
+  {
+    "name": "luci-app-autoreboot",
+    "desc": "支持计划重启"
+  },
+  {
+    "name": "luci-app-commands",
+    "desc": "Shell命令模块"
+  },
+  {
+    "name": "luci-app-firewall",
+    "desc": "添加防火墙"
+  },
+  {
+    "name": "luci-app-hd-idle",
+    "desc": "硬盘休眠"
+  },
+  {
+    "name": "luci-app-statistics",
+    "desc": "流量监控工具"
+  },
+  {
+    "name": "luci-app-ttyd",
+    "desc": "网页终端命令行"
+  },
+  {
+    "name": "luci-app-udpxy",
+    "desc": "udpxy做组播服务器"
+  },
+  {
+    "name": "luci-app-upnp",
+    "desc": "通用即插即用UPnP（端口自动转发）"
+  },
+  {
     name: 'luci-app-samba4',
     desc: 'Samba4文件共享',
   },
@@ -58,3 +94,5 @@ module.exports = [
     desc: 'Transmission下载器',
   },
 ];
+
+CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
