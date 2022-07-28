@@ -94,9 +94,3 @@ module.exports = [
     desc: 'Transmission下载器',
   },
 ];
-  
-diffconfig: |
-  CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
-  CONFIG_LUCI_LANG_zh_Hans=y
-  CONFIG_BUSYBOX_CUSTOM=y
-  CONFIG_BUSYBOX_CONFIG_FEATURE_FLOAT_SLEEP=y
