@@ -84,7 +84,10 @@ jobs:
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         ./scripts/feeds update -a
         ./scripts/feeds install -a
+        cp -r /workdir/etc files
         make defconfig
+        cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
+        echo "$(date +"%Y.%m.%d")" >./glversion
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
@@ -149,7 +152,7 @@ jobs:
         touch release.txt
         echo "## 📦‍ 固件下载 | GLINET AX1800 5.4" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "- 🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 释放内存\n4. Wol 网络唤醒\n5. 磁盘管理工具\n6. SSR-Plus 代理\n7. 动态域名 DDNS\n8. DDNSTO 内网穿透\n9. 实时流量监测\n10. 微信/Telegram推送\n11. Transmission下载器\n12. Samba4文件共享\n13. Compat依赖" >> release.txt
+        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 磁盘管理工具\n4. Samba4文件共享\n5. 动态域名 DDNS\n6. DDNS_CloudFlare.com-v1\n7. DDNS_CloudFlare.com-v4\n8. Compat依赖\n9. Wol 网络唤醒\n10. SSR-Plus 代理\n11. DDNSTO 内网穿透\n12. 实时流量监测\n13. 微信/Telegram推送\n14. Transmission下载器" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release

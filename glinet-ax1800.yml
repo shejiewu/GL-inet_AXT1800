@@ -11,7 +11,7 @@ feeds:
     path: ../../feeds/wifi-ax
   - name: gl_feeds_common
     uri: https://github.com/gl-inet/gl-feeds.git
-    revision: de64c6042bc6b0849abab616ba2351c919326860
+    revision: 5e7430fabf8eede48f4c085997a29aeb7b76ce2d
   - name: luci
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
@@ -22,7 +22,7 @@ feeds:
   - name: kenzok8_packages
     uri: https://github.com/kenzok8/openwrt-packages.git
     branch: master
-    revision: 60c1056982eed3dfbf964960f79bdd54a79f1930
+    revision: 7d7daa8c5c19065cc71dd17623797403ffd591e6
   - name: kenzok8_small
     uri: https://github.com/kenzok8/small.git
     branch: master
@@ -34,14 +34,15 @@ packages:
   - kmod-wireguard-backport
   - luci-theme-argon
   - luci-app-argon-config
-  - luci-app-ramfree
-  - luci-app-wol
   - luci-app-diskman
-  - luci-app-ssr-plus
+  - luci-app-samba4
   - luci-app-ddns
+  - ddns-scripts_cloudflare
+  - ddns-scripts_cloudflare.com-v4
+  - luci-compat
+  - luci-app-wol
+  - luci-app-ssr-plus
   - luci-app-ddnsto
   - luci-app-wrtbwmon
   - luci-app-serverchan
   - luci-app-transmission
-  - luci-app-samba4
-  - luci-compat
