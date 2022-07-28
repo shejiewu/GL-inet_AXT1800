@@ -84,7 +84,7 @@ jobs:
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        cp -r ~/work/GL-inet_AX1800_AXT1800/GL-inet_AX1800_AXT1800/etc ~/work/GL-inet_AX1800_AXT1800/GL-inet_AX1800_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
         make defconfig
         cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
         echo "$(date +"%Y.%m.%d")" >./glversion
@@ -152,7 +152,7 @@ jobs:
         touch release.txt
         echo "## 📦‍ 固件下载 | GLINET AXT1800" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "- 🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 磁盘管理工具\n4. Samba4文件共享\n5. 动态域名 DDNS\n6. DDNS_CloudFlare.com-v1\n7. DDNS_CloudFlare.com-v4\n8. Compat依赖\n9. Wol 网络唤醒\n10. SSR-Plus 代理\n11. DDNSTO 内网穿透\n12. 实时流量监测\n13. 微信/Telegram推送\n14. Transmission下载器" >> release.txt
+        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 磁盘管理工具\n4. IP/MAC绑定\n5. 支持计划重启\n6. Shell命令模块\n7. 添加防火墙\n8. 硬盘休眠\n9. 流量监控工具\n10. 网页终端命令行\n11. udpxy做组播服务器\n12. 通用即插即用UPnP（端口自动转发）\n13. Samba4文件共享\n14. 动态域名 DDNS\n15. SmartDns_DNS防污染\n16. Compat依赖\n17. Wol 网络唤醒\n18. SSR-Plus 代理\n19. DDNSTO 内网穿透\n20. 实时流量监测\n21. 微信/Telegram推送\n22. Transmission下载器" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release

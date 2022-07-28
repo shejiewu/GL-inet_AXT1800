@@ -33,10 +33,18 @@ packages:
   - luci-theme-argon
   - luci-app-argon-config
   - luci-app-diskman
+  - luci-app-arpbind
+  - luci-app-autoreboot
+  - luci-app-commands
+  - luci-app-firewall
+  - luci-app-hd-idle
+  - luci-app-statistics
+  - luci-app-ttyd
+  - luci-app-udpxy
+  - luci-app-upnp
   - luci-app-samba4
   - luci-app-ddns
-  - ddns-scripts_cloudflare
-  - ddns-scripts_cloudflare.com-v4
+  - luci-app-smartdns
   - luci-compat
   - luci-app-wol
   - luci-app-ssr-plus

@@ -1,9 +1,9 @@
 ---
-profile: glinet_axt1800
+profile: glinet_ax1800
 target: ipq807x
 subtarget: ipq60xx
-description: Build image for the GL.iNET AXT1800
-image: bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_axt1800-squashfs-sysupgrade.tar
+description: Build image for the GL.iNET AX1800
+image: bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_ax1800-squashfs-sysupgrade.tar
 feeds:
   - name: ipq807x
     path: ../../feeds/ipq807x
@@ -29,7 +29,6 @@ feeds:
     revision: 5afbe3bba9a2953f506074cc0d943580a38f589e
 include: []
 packages:
-  - kmod-hwmon-pwmfan
   - wireless-regdb
   - wget-ssl
   - kmod-wireguard-backport

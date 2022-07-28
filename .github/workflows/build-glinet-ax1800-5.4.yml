@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: BUILD GLINET AXT1800 5.4
+name: BUILD GLINET AX1800 5.4
 
 on:
   repository_dispatch:
@@ -21,8 +21,8 @@ on:
 
 #  push:
     paths:
-      - '.github/workflows/build-glinet-axt1800-5.4.yml'
-      - 'glinet-axt1800-5-4.yml'
+      - '.github/workflows/build-glinet-ax1800-5.4.yml'
+      - 'glinet-ax1800-5-4.yml'
     branches:
       - main
 
@@ -67,7 +67,7 @@ jobs:
         git clone $REPO_URL -b $REPO_BRANCH gl-infra-builder
         ln -sf /workdir/gl-infra-builder $GITHUB_WORKSPACE/gl-infra-builder
         cd $GITHUB_WORKSPACE
-        [ -e glinet-axt1800-5-4.yml ] && mv glinet-axt1800-5-4.yml /workdir/gl-infra-builder/profiles
+        [ -e glinet-ax1800-5-4.yml ] && mv glinet-ax1800-5-4.yml /workdir/gl-infra-builder/profiles
 
     - name: run setup.py
       run: |
@@ -80,7 +80,7 @@ jobs:
       id: package
       run: |
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
-        ./scripts/gen_config.py glinet-axt1800-5-4 glinet_depends
+        ./scripts/gen_config.py glinet-ax1800-5-4 glinet_depends
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         ./scripts/feeds update -a
         ./scripts/feeds install -a
@@ -148,9 +148,9 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled() && !failure()
       run: |
-        echo "::set-output name=release_tag::AXT1800-$(date +"%Y.%m.%d-%H.%M")"
+        echo "::set-output name=release_tag::AX1800-$(date +"%Y.%m.%d-%H.%M")"
         touch release.txt
-        echo "## 📦‍ 固件下载 | GLINET AXT1800 5.4" >> release.txt
+        echo "## 📦‍ 固件下载 | GLINET AX1800 5.4" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "- 🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
         echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 磁盘管理工具\n4. IP/MAC绑定\n5. 支持计划重启\n6. Shell命令模块\n7. 添加防火墙\n8. 硬盘休眠\n9. 流量监控工具\n10. 网页终端命令行\n11. udpxy做组播服务器\n12. 通用即插即用UPnP（端口自动转发）\n13. Samba4文件共享\n14. 动态域名 DDNS\n15. SmartDns_DNS防污染\n16. Compat依赖\n17. Wol 网络唤醒\n18. SSR-Plus 代理\n19. DDNSTO 内网穿透\n20. 实时流量监测\n21. 微信/Telegram推送\n22. Transmission下载器" >> release.txt
         echo "::set-output name=status::success"
