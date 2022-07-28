@@ -94,5 +94,12 @@ module.exports = [
     desc: 'Transmission下载器',
   },
 ];
-
-CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
+  
+diffconfig: |
+  CONFIG_PACKAGE_wpad-basic=n
+  CONFIG_PACKAGE_wpad=n
+  CONFIG_PACKAGE_dnsmasq=n
+  CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
+  CONFIG_LUCI_LANG_zh_Hans=y
+  CONFIG_BUSYBOX_CUSTOM=y
+  CONFIG_BUSYBOX_CONFIG_FEATURE_FLOAT_SLEEP=y
