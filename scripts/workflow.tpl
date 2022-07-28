@@ -84,7 +84,7 @@ jobs:
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        cp -r ~/work/GL-inet_AX1800_AXT1800/GL-inet_AX1800_AXT1800/etc ~/work/GL-inet_AX1800_AXT1800/GL-inet_AX1800_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
         make defconfig
         cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
         echo "$(date +"%Y.%m.%d")" >./glversion
