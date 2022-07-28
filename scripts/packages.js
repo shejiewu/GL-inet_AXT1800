@@ -96,9 +96,6 @@ module.exports = [
 ];
   
 diffconfig: |
-  CONFIG_PACKAGE_wpad-basic=n
-  CONFIG_PACKAGE_wpad=n
-  CONFIG_PACKAGE_dnsmasq=n
   CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
   CONFIG_LUCI_LANG_zh_Hans=y
   CONFIG_BUSYBOX_CUSTOM=y
