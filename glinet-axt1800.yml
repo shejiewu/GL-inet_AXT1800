@@ -48,7 +48,6 @@ packages:
   - luci-app-samba4
   - luci-app-ddns
   - luci-app-smartdns
-  - luci-compat
   - luci-app-wol
   - luci-app-ssr-plus
   - luci-app-ddnsto
