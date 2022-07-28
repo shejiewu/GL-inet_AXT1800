@@ -82,11 +82,10 @@ jobs:
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
         ./scripts/gen_config.py glinet-ax1800-5-4 glinet_depends
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
-        ls -l
-        # ./scripts/feeds update -a
-        # ./scripts/feeds install -a
-        # cp -r /workdir/etc files
-        # make defconfig
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
+        cp -r ~/work/GL-inet_AX1800_AXT1800/GL-inet_AX1800_AXT1800/etc ~/work/GL-inet_AX1800_AXT1800/GL-inet_AX1800_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
+        make defconfig
         cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
         echo "$(date +"%Y.%m.%d")" >./glversion
 
