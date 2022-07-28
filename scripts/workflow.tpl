@@ -84,8 +84,9 @@ jobs:
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        cp -r /workdir/etc files
-        make defconfig
+        ls -l
+        #cp -r /workdir/etc files
+        # make defconfig
         cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
         echo "$(date +"%Y.%m.%d")" >./glversion
 
