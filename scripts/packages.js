@@ -30,14 +30,6 @@ module.exports = [
     desc: 'SmartDns_DNS防污染',
   },
   {
-    name: 'ddns-scripts_cloudflare',
-    desc: 'DDNS_CloudFlare.com-v1',
-  },
-  {
-    name: 'ddns-scripts_cloudflare.com-v4',
-    desc: 'DDNS_CloudFlare.com-v4',
-  },
-  {
     name: 'luci-compat',
     desc: 'Compat依赖'
   },
