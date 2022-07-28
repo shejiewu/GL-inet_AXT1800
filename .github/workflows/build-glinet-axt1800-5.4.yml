@@ -152,7 +152,7 @@ jobs:
         touch release.txt
         echo "## 📦‍ 固件下载 | GLINET AXT1800 5.4" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "- 🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. 磁盘管理工具\n4. IP/MAC绑定\n5. 支持计划重启\n6. Shell命令模块\n7. 添加防火墙\n8. 硬盘休眠\n9. 流量监控工具\n10. 网页终端命令行\n11. udpxy做组播服务器\n12. 通用即插即用UPnP（端口自动转发）\n13. Samba4文件共享\n14. 动态域名 DDNS\n15. SmartDns_DNS防污染\n16. Compat依赖\n17. Wol 网络唤醒\n18. SSR-Plus 代理\n19. DDNSTO 内网穿透\n20. 实时流量监测\n21. 微信/Telegram推送\n22. Transmission下载器" >> release.txt
+        echo -e "## ✨ 主要功能\n1. 访问时间控制\n2. Argon主题\n3. Argon主题设置\n4. IP/MAC绑定\n5. 支持计划重启\n6. 动态域名 DDNS\n7. DDNSTO 内网穿透\n8. 磁盘管理工具\n9. 添加防火墙\n10. 网络带宽监视器\n11. 释放内存\n12. Samba4文件共享\n13. 微信/Telegram推送\n14. SSR-Plus 代理\n15. Transmission下载器\n16. 网页终端命令行\n17. udpxy做组播服务器\n18. 通用即插即用UPnP（端口自动转发）\n19. Wol 网络唤醒\n20. 实时流量监测\n21. Compat依赖" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release

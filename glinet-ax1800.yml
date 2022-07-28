@@ -32,25 +32,24 @@ packages:
   - wireless-regdb
   - wget-ssl
   - kmod-wireguard-backport
+  - luci-app-accesscontrol
   - luci-theme-argon
   - luci-app-argon-config
-  - luci-app-diskman
   - luci-app-arpbind
   - luci-app-autoreboot
-  - luci-app-commands
+  - luci-app-ddns
+  - luci-app-ddnsto
+  - luci-app-diskman
   - luci-app-firewall
-  - luci-app-hd-idle
-  - luci-app-statistics
+  - luci-app-nlbwmon
+  - luci-app-ramfree
+  - luci-app-samba4
+  - luci-app-serverchan
+  - luci-app-ssr-plus
+  - luci-app-transmission
   - luci-app-ttyd
   - luci-app-udpxy
   - luci-app-upnp
-  - luci-app-samba4
-  - luci-app-ddns
-  - luci-app-smartdns
-  - luci-compat
   - luci-app-wol
-  - luci-app-ssr-plus
-  - luci-app-ddnsto
   - luci-app-wrtbwmon
-  - luci-app-serverchan
-  - luci-app-transmission
+  - luci-compat
