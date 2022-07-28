@@ -26,6 +26,10 @@ module.exports = [
     desc: '动态域名 DDNS',
   },
   {
+    name: 'luci-app-smartdns',
+    desc: 'SmartDns_DNS防污染',
+  },
+  {
     name: 'ddns-scripts_cloudflare',
     desc: 'DDNS_CloudFlare.com-v1',
   },
