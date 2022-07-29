@@ -18,21 +18,16 @@ feeds:
   - name: immortalwrt_luci
     uri: https://github.com/immortalwrt/luci.git
     branch: openwrt-21.02
-    revision: 786e681d614ca9d4da771e993e9ba12f587c036f
-  - name: kenzok8_packages
-    uri: https://github.com/kenzok8/openwrt-packages.git
-    branch: master
-    revision: 0dd3607e809b075173d840a287878e8dedf87768
-  - name: kenzok8_small
-    uri: https://github.com/kenzok8/small.git
-    branch: master
-    revision: 99791eed039d98056be82b4ecc57b20c6ac322b6
+    revision: fb81432f8516c0711b7428a8641a1263ab52373e
+  - name: NueXini_Packages
+    uri: https://github.com/NueXini/NueXini_Packages.git
+    branch: main
+    revision: bc587879264dc74384d7c03408c4c352c6b5e7dd
 include: []
 packages:
   - wireless-regdb
   - wget-ssl
   - kmod-wireguard-backport
-  - luci-app-accesscontrol
   - luci-theme-argon
   - luci-app-argon-config
   - luci-app-arpbind
@@ -41,12 +36,14 @@ packages:
   - luci-app-ddnsto
   - luci-app-diskman
   - luci-app-nlbwmon
+  - luci-app-passwall
   - luci-app-ramfree
-  - luci-app-samba4
+  - luci-app-unblockneteasemusic
+  - luci-app-samba
   - luci-app-serverchan
+  - luci-app-smartdns
   - luci-app-ssr-plus
   - luci-app-transmission
-  - luci-app-ttyd
   - luci-app-udpxy
   - luci-app-upnp
   - luci-app-wol
