@@ -1,0 +1,52 @@
+---
+profile: glinet_axt1800
+target: ipq807x
+subtarget: ipq60xx
+description: Build image for the GL.iNET AXT1800
+image: bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_axt1800-squashfs-sysupgrade.tar
+feeds:
+  - name: ipq807x
+    path: ../../feeds/ipq807x
+  - name: wifi_ax
+    path: ../../feeds/wifi-ax
+  - name: gl_feeds_common
+    uri: https://github.com/gl-inet/gl-feeds.git
+    revision: 17bad2766e8435b483044156207f40630604dfcb
+  - name: luci
+    uri: https://github.com/openwrt/luci.git
+    revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
+  - name: immortalwrt_luci
+    uri: https://github.com/immortalwrt/luci.git
+    branch: openwrt-21.02
+    revision: fb81432f8516c0711b7428a8641a1263ab52373e
+  - name: NueXini_Packages
+    uri: https://github.com/NueXini/NueXini_Packages.git
+    branch: main
+    revision: 47a28f3d9479f37ea0e3dd0b33b93a8bf6bc1a1d
+include: []
+packages:
+  - kmod-hwmon-pwmfan
+  - wireless-regdb
+  - wget-ssl
+  - kmod-wireguard-backport
+  - luci-theme-argon
+  - luci-app-argon-config
+  - luci-app-arpbind
+  - luci-app-autoreboot
+  - luci-app-ddns
+  - luci-app-ddnsto
+  - luci-app-diskman
+  - luci-app-nlbwmon
+  - luci-app-passwall
+  - luci-app-ramfree
+  - luci-app-samba
+  - luci-app-serverchan
+  - luci-app-smartdns
+  - luci-app-ssr-plus
+  - luci-app-transmission
+  - luci-app-udpxy
+  - luci-app-unblockneteasemusic
+  - luci-app-upnp
+  - luci-app-wol
+  - luci-app-wrtbwmon
+  - luci-compat
