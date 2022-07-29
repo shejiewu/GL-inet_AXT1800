@@ -20,7 +20,7 @@ feeds:
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: bc587879264dc74384d7c03408c4c352c6b5e7dd
+    revision: 47a28f3d9479f37ea0e3dd0b33b93a8bf6bc1a1d
 include:
   - wifi-ax
 packages:
@@ -35,13 +35,13 @@ packages:
   - luci-app-nlbwmon
   - luci-app-passwall
   - luci-app-ramfree
-  - luci-app-unblockneteasemusic
   - luci-app-samba
   - luci-app-serverchan
   - luci-app-smartdns
   - luci-app-ssr-plus
   - luci-app-transmission
   - luci-app-udpxy
+  - luci-app-unblockneteasemusic
   - luci-app-upnp
   - luci-app-wol
   - luci-app-wrtbwmon
