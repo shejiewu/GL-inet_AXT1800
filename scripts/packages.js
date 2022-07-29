@@ -30,8 +30,8 @@ module.exports = [
     desc: '动态域名 DDNS',
   },
   {
-    name: 'luci-app-ddnsto',
-    desc: 'DDNSTO 内网穿透',
+    "name": "luci-app-smartdns",
+    "desc": "SmartDNS 本地DNS服务"
   },
   {
     name: 'luci-app-diskman',
