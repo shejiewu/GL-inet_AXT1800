@@ -14,12 +14,12 @@ module.exports = [
     desc: 'Argon主题设置',
   },
   {
-    "name": "luci-app-arpbind",
-    "desc": "IP/MAC绑定"
+    name: 'luci-app-arpbind',
+    desc: 'IP/MAC绑定',
   },
   {
-    "name": "luci-app-autoreboot",
-    "desc": "支持计划重启"
+    name: 'luci-app-autoreboot',
+    desc: '支持计划重启',
   },
   {
     name: 'luci-app-ddns',
@@ -34,21 +34,17 @@ module.exports = [
     desc: '磁盘管理工具',
   },
   {
-    "name": "luci-app-nlbwmon",
-    "desc": "网络带宽监视器"
+    name: 'luci-app-nlbwmon',
+    desc: '网络带宽监视器',
   },
   
   {
-    "name": "luci-app-passwall",
-    "desc": "PassWall 代理"
+    name: 'luci-app-passwall',
+    desc: 'PassWall 代理',
   },
   {
-    "name": "luci-app-ramfree",
-    "desc": "释放内存"
-  },
-  {
-    "name": "luci-app-unblockneteasemusic",
-    "desc": "解网易云歌曲"
+    name: 'luci-app-ramfree',
+    desc: '释放内存',
   },
   {
     name: 'luci-app-samba',
@@ -59,8 +55,8 @@ module.exports = [
     desc: '微信/Telegram推送',
   },
   {
-    "name": "luci-app-smartdns",
-    "desc": "SmartDNS 本地DNS服务"
+    name: 'luci-app-smartdns',
+    desc: 'SmartDNS 本地DNS服务',
   },
   {
     name: 'luci-app-ssr-plus',
@@ -71,12 +67,16 @@ module.exports = [
     desc: 'Transmission下载器',
   },
   {
-    "name": "luci-app-udpxy",
-    "desc": "udpxy做组播服务器"
+    name: 'luci-app-udpxy',
+    desc: 'udpxy做组播服务器',
   },
   {
-    "name": "luci-app-upnp",
-    "desc": "通用即插即用UPnP（端口自动转发）"
+    name: 'luci-app-unblockneteasemusic',
+    desc: '解网易云歌曲',
+  },
+  {
+    name: 'luci-app-upnp',
+    desc: '通用即插即用UPnP（端口自动转发）',
   },
   {
     name: 'luci-app-wol',
@@ -88,6 +88,6 @@ module.exports = [
   },
   {
     name: 'luci-compat',
-    desc: 'Compat依赖'
+    desc: 'Compat依赖',
   },
 ];
