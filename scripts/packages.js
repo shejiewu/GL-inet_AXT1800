@@ -38,10 +38,6 @@ module.exports = [
     desc: '磁盘管理工具',
   },
   {
-    "name": "luci-app-firewall",
-    "desc": "添加防火墙"
-  },
-  {
     "name": "luci-app-nlbwmon",
     "desc": "网络带宽监视器"
   },
