@@ -89,7 +89,9 @@ const GenerateYml = (workflows) => {
       profilesYml = deepmerge(profilesYml, { feeds });
       // 合并 packages 配置
       profilesYml = deepmerge(profilesYml, { packages });
-
+      // 合并 diffconfig 配置
+      profilesYml = deepmerge(profilesYml, { diffconfig });
+     
       // 转换为 YAML 格式
       const yamlStr = yaml.dump(profilesYml, { lineWidth: -1, sortKeys });
       // 配置文件路径
