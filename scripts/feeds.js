@@ -11,19 +11,24 @@ module.exports = [
     uri: 'https://github.com/immortalwrt/luci.git',
     branch: 'openwrt-21.02',
   },
+  {
+    name: 'liuran001_packages',
+    uri: 'https://github.com/liuran001/openwrt-packages.git',
+    branch: 'packages',
+  },
   // {
   //   name: 'lienol_packages',
   //   uri: 'https://github.com/Lienol/openwrt-package.git',
   //   branch: 'main',
   // },
-  {
-    name: 'kenzok8_packages',
-    uri: 'https://github.com/kenzok8/openwrt-packages.git',
-    branch: 'master',
-  },
-  {
-    name: 'kenzok8_small',
-    uri: 'https://github.com/kenzok8/small.git',
-    branch: 'master',
-  },
+  // {
+  //   name: 'kenzok8_packages',
+  //    uri: 'https://github.com/kenzok8/openwrt-packages.git',
+  //   branch: 'master',
+  // },
+  // {
+  //   name: 'kenzok8_small',
+  //   uri: 'https://github.com/kenzok8/small.git',
+  //   branch: 'master',
+  // },
 ];
