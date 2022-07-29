@@ -11,7 +11,7 @@ feeds:
     path: ../../feeds/wifi-ax
   - name: gl_feeds_common
     uri: https://github.com/gl-inet/gl-feeds.git
-    revision: 5e7430fabf8eede48f4c085997a29aeb7b76ce2d
+    revision: 17bad2766e8435b483044156207f40630604dfcb
   - name: luci
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
@@ -22,11 +22,11 @@ feeds:
   - name: kenzok8_packages
     uri: https://github.com/kenzok8/openwrt-packages.git
     branch: master
-    revision: 7d7daa8c5c19065cc71dd17623797403ffd591e6
+    revision: 0dd3607e809b075173d840a287878e8dedf87768
   - name: kenzok8_small
     uri: https://github.com/kenzok8/small.git
     branch: master
-    revision: 5afbe3bba9a2953f506074cc0d943580a38f589e
+    revision: 99791eed039d98056be82b4ecc57b20c6ac322b6
 include: []
 packages:
   - kmod-hwmon-pwmfan
@@ -41,7 +41,6 @@ packages:
   - luci-app-ddns
   - luci-app-ddnsto
   - luci-app-diskman
-  - luci-app-firewall
   - luci-app-nlbwmon
   - luci-app-ramfree
   - luci-app-samba4
@@ -54,13 +53,3 @@ packages:
   - luci-app-wol
   - luci-app-wrtbwmon
   - luci-compat
-diffconfig: |
-  CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
-  CONFIG_PACKAGE_luci-compat=y
-  CONFIG_PACKAGE_luci-i18n-argon-config-zh-cn=y
-  CONFIG_PACKAGE_luci-i18n-ttyd-zh-cn=y
-  CONFIG_PACKAGE_luci-i18n-wrtbwmon-zh-cn=y
-  CONFIG_PACKAGE_luci-i18n-ddns-zh-cn=y
-  CONFIG_LUCI_LANG_zh_Hans=y
-  CONFIG_BUSYBOX_CUSTOM=y
-  CONFIG_BUSYBOX_CONFIG_FEATURE_FLOAT_SLEEP=y
