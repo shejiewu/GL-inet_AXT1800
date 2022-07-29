@@ -12,10 +12,20 @@ module.exports = [
     branch: 'openwrt-21.02',
   },
   {
-    name: 'liuran001_packages',
-    uri: 'https://github.com/liuran001/openwrt-packages.git',
-    branch: 'packages',
+    name: 'NueXini_Packages',
+    uri: 'https://github.com/NueXini/NueXini_Packages.git',
+    branch: 'main',
   },
+  // {
+  //   name: 'liuran001_packages',
+  //   uri: 'https://github.com/liuran001/openwrt-packages.git',
+  //   branch: 'luci',
+  // },
+  // {
+  //   name: 'xiaorouji_passwall',
+  //   uri: 'https://github.com/xiaorouji/openwrt-passwall.git',
+  //   branch: 'packages',
+  // },
   // {
   //   name: 'lienol_packages',
   //   uri: 'https://github.com/Lienol/openwrt-package.git',
