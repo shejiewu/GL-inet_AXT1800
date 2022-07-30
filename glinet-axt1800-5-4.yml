@@ -34,7 +34,7 @@ packages:
   - luci-app-ddnsto
   - luci-app-diskman
   - luci-app-nlbwmon
-  - luci-app-passwall
+  - luci-app-passwall2
   - luci-app-ramfree
   - luci-app-samba
   - luci-app-serverchan
