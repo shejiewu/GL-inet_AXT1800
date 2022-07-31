@@ -86,24 +86,24 @@ jobs:
         ./scripts/feeds install -a
         make defconfig
         #config system
-        uci set system.@system[0].timezone=CST-8
-        uci set system.@system[0].zonename=Asia/Shanghai
+        uci set system.@system[0].timezone = CST-8
+        uci set system.@system[0].zonename = Asia/Shanghai
         uci del system.led_wan
         uci commit system
-        uci set glfan.@globals[0].temperature='35'
-        uci set glfan.@globals[0].intergration='4'
-        uci set glfan.@globals[0].differential='20'
+        uci set glfan.@globals[0].temperature = '35'
+        uci set glfan.@globals[0].intergration = '4'
+        uci set glfan.@globals[0].differential = '20'
         uci commit glfan
         # config wireless
-        uci set wireless.radio0.cell_density='0'
-        uci set wireless.default_radio0.ssid='GL-AXT1800-2.4G'
-        uci set wireless.default_radio0.encryption='psk2'
-        uci set wireless.default_radio0.key='12345678'
-        uci set wireless.radio1.cell_density='0'
-        uci set wireless.default_radio1.ssid='GL-AXT1800-5.0G'
-        uci set wireless.default_radio1.encryption='psk2'
-        uci set wireless.default_radio1.key='12345678'
-        uci set wireless.default_radio1.macfilter='deny'
+        uci set wireless.radio0.cell_density = '0'
+        uci set wireless.default_radio0.ssid = 'GL-AXT1800-2.4G'
+        uci set wireless.default_radio0.encryption = 'psk2'
+        uci set wireless.default_radio0.key = '12345678'
+        uci set wireless.radio1.cell_density = '0'
+        uci set wireless.default_radio1.ssid = 'GL-AXT1800-5.0G'
+        uci set wireless.default_radio1.encryption = 'psk2'
+        uci set wireless.default_radio1.key = '12345678'
+        uci set wireless.default_radio1.macfilter = 'deny'
         uci commit wireless
         sed -i '/option disabled/d' /etc/config/wireless
         sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
