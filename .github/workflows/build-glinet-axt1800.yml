@@ -90,6 +90,10 @@ jobs:
         uci set system.@system[0].zonename=Asia/Shanghai
         uci del system.led_wan
         uci commit system
+        uci set glfan.@globals[0].temperature='35'
+        uci set glfan.@globals[0].intergration='4'
+        uci set glfan.@globals[0].differential='20'
+        uci commit glfan
         # config wireless
         uci set wireless.radio0.cell_density='0'
         uci set wireless.default_radio0.ssid='GL-AXT1800-2.4G'
