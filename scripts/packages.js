@@ -47,8 +47,8 @@ module.exports = [
     desc: '释放内存',
   },
   {
-    name: 'luci-app-samba',
-    desc: 'Samba 文件共享',
+    name: 'luci-app-samba4',
+    desc: 'Samba4 文件共享',
   },
   {
     name: 'luci-app-serverchan',
