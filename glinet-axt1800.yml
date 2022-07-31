@@ -39,7 +39,7 @@ packages:
   - luci-app-nlbwmon
   - luci-app-passwall2
   - luci-app-ramfree
-  - luci-app-samba
+  - luci-app-samba4
   - luci-app-serverchan
   - luci-app-smartdns
   - luci-app-ssr-plus
