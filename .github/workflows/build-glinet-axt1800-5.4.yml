@@ -84,8 +84,26 @@ jobs:
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
         make defconfig
+        #config system
+        uci set system.@system[0].timezone=CST-8
+        uci set system.@system[0].zonename=Asia/Shanghai
+        uci del system.led_wan
+        uci commit system
+        # config wireless
+        uci set wireless.radio0.cell_density='0'
+        uci set wireless.default_radio0.ssid='GL-AXT1800-2.4G'
+        uci set wireless.default_radio0.encryption='psk2'
+        uci set wireless.default_radio0.key='12345678'
+        uci set wireless.radio1.cell_density='0'
+        uci set wireless.default_radio1.ssid='GL-AXT1800-5.0G'
+        uci set wireless.default_radio1.encryption='psk2'
+        uci set wireless.default_radio1.key='12345678'
+        uci set wireless.default_radio1.macfilter='deny'
+        uci commit wireless
+        sed -i '/option disabled/d' /etc/config/wireless
+        sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
         cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
         echo "$(date +"%Y.%m.%d")" >./glversion
 
@@ -152,7 +170,7 @@ jobs:
         touch release.txt
         echo "## 📦‍ 固件下载 | GLINET AXT1800 5.4" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "- 🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. IP/MAC绑定\n4. 支持计划重启\n5. 动态域名 DDNS\n6. DDNSTO 内网穿透\n7. 磁盘管理工具\n8. 网络带宽监视器\n9. PassWall2 代理\n10. 释放内存\n11. Samba 文件共享\n12. 微信/Telegram推送\n13. SmartDNS 本地DNS服务\n14. SSR-Plus 代理\n15. Transmission下载器\n16. udpxy做组播服务器\n17. 解网易云歌曲\n18. 通用即插即用UPnP（端口自动转发）\n19. Wol 网络唤醒\n20. 实时流量监测\n21. Compat依赖" >> release.txt
+        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. IP/MAC绑定\n4. 支持计划重启\n5. 动态域名 DDNS\n6. DDNSTO 内网穿透\n7. 磁盘管理工具\n8. 网络带宽监视器\n9. PassWall2 代理\n10. 释放内存\n11. Samba 文件共享\n12. 微信/Telegram推送\n13. SmartDNS 本地DNS服务\n14. SSR-Plus 代理\n15. Transmission下载器\n16. 解网易云歌曲3合1\n17. 解网易云歌曲-GO\n18. 解网易云歌曲-MINI\n19. 通用即插即用UPnP（端口自动转发）\n20. Wol 网络唤醒\n21. 实时流量监测\n22. Compat依赖" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release
