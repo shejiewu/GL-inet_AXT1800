@@ -67,12 +67,16 @@ module.exports = [
     desc: 'Transmission下载器',
   },
   {
-    name: 'luci-app-udpxy',
-    desc: 'udpxy做组播服务器',
+    name: 'luci-app-unblockmusic',
+    desc: '解网易云歌曲3合1',
+  },
+  {
+    name: 'luci-app-unblockneteasemusic-go',
+    desc: '解网易云歌曲-GO',
   },
   {
     name: 'luci-app-unblockneteasemusic',
-    desc: '解网易云歌曲',
+    desc: '解网易云歌曲-MINI',
   },
   {
     name: 'luci-app-upnp',
