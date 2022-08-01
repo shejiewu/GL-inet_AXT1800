@@ -19,14 +19,14 @@ on:
         required: false
         default: 'false'
 
-  push:
+#  push:
     paths:
       - '.github/workflows/${workflowName}.yml'
       - '${build}.yml'
     branches:
       - main
 
-  schedule:
+#  schedule:
     - cron: 0 16 * * *
 
 env:
