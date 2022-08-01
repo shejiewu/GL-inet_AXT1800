@@ -19,14 +19,14 @@ on:
         required: false
         default: 'false'
 
-  push:
+#  push:
     paths:
       - '.github/workflows/build-glinet-axt1800-5.4.yml'
       - 'glinet-axt1800-5-4.yml'
     branches:
       - main
 
-  schedule:
+#  schedule:
     - cron: 0 16 * * *
 
 env:
