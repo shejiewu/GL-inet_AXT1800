@@ -9,7 +9,7 @@
 ## 目录介绍
 
 ```tree
-Draco-OpenWrt-GL-AX1800
+GL-inet_AXT1800
 ├── .github/workflows
 │   ├── build-glinet-axt1800-5.4.yml  云编译 AXT1800 5.X内核固件
 │   ├── build-glinet-axt1800.yml      云编译 AXT1800 4.X内核固件
