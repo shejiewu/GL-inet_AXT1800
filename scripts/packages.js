@@ -63,6 +63,10 @@ module.exports = [
     desc: 'SSR-Plus 代理',
   },
   {
+    name: 'luci-app-store',
+    desc: '应用商店',
+  },
+  {
     name: 'luci-app-transmission',
     desc: 'Transmission下载器',
   },
