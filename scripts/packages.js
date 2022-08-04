@@ -39,8 +39,8 @@ module.exports = [
   },
   
   {
-    name: 'luci-app-passwall2',
-    desc: 'PassWall2 代理',
+    name: 'luci-app-passwall',
+    desc: 'PassWall 代理',
   },
   {
     name: 'luci-app-ramfree',
