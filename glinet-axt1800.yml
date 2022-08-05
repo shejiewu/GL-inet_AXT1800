@@ -18,11 +18,11 @@ feeds:
   - name: immortalwrt_luci
     uri: https://github.com/immortalwrt/luci.git
     branch: openwrt-21.02
-    revision: 8e2a542ae1028e53ed5c3fd2d19f077b50ed0811
+    revision: 081ae7d4e18d6795a3c906bd793b5db41035baaa
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: d964d7ddc0dc2d4505cec7146a6bc29fe982a4dd
+    revision: 6798bfbd68414f1b51ad0254c7d21f99757b7bb1
 include: []
 packages:
   - kmod-hwmon-pwmfan
@@ -37,15 +37,10 @@ packages:
   - luci-app-ddnsto
   - luci-app-diskman
   - luci-app-nlbwmon
-  - luci-app-passwall
   - luci-app-ramfree
-  - luci-app-samba4
   - luci-app-serverchan
-  - luci-app-smartdns
   - luci-app-ssr-plus
-  - luci-app-store
   - luci-app-transmission
-  - luci-app-unblockmusic
   - luci-app-unblockneteasemusic-go
   - luci-app-unblockneteasemusic
   - luci-app-upnp
