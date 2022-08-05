@@ -36,44 +36,43 @@ module.exports = [
   {
     name: 'luci-app-nlbwmon',
     desc: '网络带宽监视器',
-  },
-  
-  {
-    name: 'luci-app-passwall',
-    desc: 'PassWall 代理',
-  },
+  }, 
+  // {
+  //   name: 'luci-app-passwall',
+  //   desc: 'PassWall 代理',
+  // },
   {
     name: 'luci-app-ramfree',
     desc: '释放内存',
   },
-  {
-    name: 'luci-app-samba4',
-    desc: 'Samba4 文件共享',
-  },
+  // {
+  //   name: 'luci-app-samba4',
+  //   desc: 'Samba4 文件共享',
+  // },
   {
     name: 'luci-app-serverchan',
     desc: '微信/Telegram推送',
   },
-  {
-    name: 'luci-app-smartdns',
-    desc: 'SmartDNS 本地DNS服务',
-  },
+  // {
+  //   name: 'luci-app-smartdns',
+  //   desc: 'SmartDNS 本地DNS服务',
+  // },
   {
     name: 'luci-app-ssr-plus',
     desc: 'SSR-Plus 代理',
   },
-  {
-    name: 'luci-app-store',
-    desc: '应用商店',
-  },
+  // {
+  //   name: 'luci-app-store',
+  //   desc: '应用商店',
+  // },
   {
     name: 'luci-app-transmission',
     desc: 'Transmission下载器',
   },
-  {
-    name: 'luci-app-unblockmusic',
-    desc: '解网易云歌曲3合1',
-  },
+  // {
+  //   name: 'luci-app-unblockmusic',
+  //   desc: '解网易云歌曲3合1',
+  // },
   {
     name: 'luci-app-unblockneteasemusic-go',
     desc: '解网易云歌曲-GO',
