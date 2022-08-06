@@ -29,8 +29,8 @@ dns:
   ratelimit_whitelist: []
   refuse_any: true
   upstream_dns:
-  - 1.1.1.1
   - 8.8.8.8
+  - 9.9.9.9
   upstream_dns_file: ""
   bootstrap_dns:
   - 9.9.9.10
@@ -98,18 +98,6 @@ filters:
   url: https://adaway.org/hosts.txt
   name: AdAway Default Blocklist
   id: 2
-- enabled: true
-  url: https://abp.oisd.nl/basic/
-  name: OISD Blocklist Basic
-  id: 1658880613
-- enabled: true
-  url: https://anti-ad.net/easylist.txt
-  name: 'CHN: anti-AD'
-  id: 1658880614
-- enabled: true
-  url: https://easylist-downloads.adblockplus.org/easylistdutch.txt
-  name: 'NLD: Easylist'
-  id: 1658880616
 whitelist_filters: []
 user_rules: []
 dhcp:
