@@ -66,6 +66,13 @@ jobs:
         echo $GITHUB_WORKSPACE
         git clone $REPO_URL -b $REPO_BRANCH gl-infra-builder
         ln -sf /workdir/gl-infra-builder $GITHUB_WORKSPACE/gl-infra-builder
+    - name: SSH connection to Actions
+      uses: P3TERX/ssh2actions@v1.0.0
+      if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
+      env:
+        TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+        
         cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings/ ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/feeds/default-settings/
         cd $GITHUB_WORKSPACE
         [ -e glinet-axt1800.yml ] && mv glinet-axt1800.yml /workdir/gl-infra-builder/profiles
