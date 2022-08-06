@@ -34,6 +34,7 @@ esac
 #clone source tree
 git clone https://github.com/gl-inet/gl-infra-builder.git $PWD/gl-infra-builder
 cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
+cp -r default-settings/  $PWD/gl-infra-builder/feeds/default-settings/
 cd $PWD/gl-infra-builder
 #setup
 python3 setup.py -c configs/config-$DEVICE1.yml
