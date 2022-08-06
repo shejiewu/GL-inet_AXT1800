@@ -66,9 +66,9 @@ jobs:
         echo $GITHUB_WORKSPACE
         git clone $REPO_URL -b $REPO_BRANCH gl-infra-builder
         ln -sf /workdir/gl-infra-builder $GITHUB_WORKSPACE/gl-infra-builder
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings/ ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/feeds/default-settings/
         cd $GITHUB_WORKSPACE
         [ -e ${build}.yml ] && mv ${build}.yml /workdir/gl-infra-builder/profiles
+        [ -e default-settings ] && mv default-settings /workdir/gl-infra-builder/feeds
 
     - name: run setup.py
       run: |
