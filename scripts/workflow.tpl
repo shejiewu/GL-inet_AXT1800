@@ -85,8 +85,8 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         make defconfig
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/package/feeds/packages/default-settings/
         cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files/
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/package/feeds/packages/default-settings/
         cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
         echo "$(date +"%Y.%m.%d")" >./glversion
 
