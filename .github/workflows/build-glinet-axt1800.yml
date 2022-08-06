@@ -69,6 +69,7 @@ jobs:
         cd $GITHUB_WORKSPACE
         [ -e glinet-axt1800.yml ] && mv glinet-axt1800.yml /workdir/gl-infra-builder/profiles
         [ -e default-settings ] && mv default-settings /workdir/gl-infra-builder/feeds
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings/ ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/feeds/default-settings/
 
     - name: run setup.py
       run: |
@@ -86,7 +87,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         make defconfig
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files/
         cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
         echo "$(date +"%Y.%m.%d")" >./glversion
 
