@@ -1,4 +1,0 @@
-
-config adguardhome 'config'
-	option enabled '1'
-
