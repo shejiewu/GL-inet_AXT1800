@@ -79,9 +79,6 @@ jobs:
     - name: Download package
       id: package
       run: |
-        cd /workdir/gl-infra-builder/wlan-ap/openwrt
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings/ ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/feeds/default-settings/
-        ./scripts/gen_config.py glinet-axt1800 glinet_depends default-settings
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
