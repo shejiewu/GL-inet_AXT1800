@@ -46,3 +46,4 @@ packages:
   - luci-app-wol
   - luci-app-wrtbwmon
   - luci-compat
+  - default-settings
