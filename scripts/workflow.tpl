@@ -66,6 +66,7 @@ jobs:
         echo $GITHUB_WORKSPACE
         git clone $REPO_URL -b $REPO_BRANCH gl-infra-builder
         ln -sf /workdir/gl-infra-builder $GITHUB_WORKSPACE/gl-infra-builder
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings/ ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/feeds/default-settings/
         cd $GITHUB_WORKSPACE
         [ -e ${build}.yml ] && mv ${build}.yml /workdir/gl-infra-builder/profiles
 
@@ -80,7 +81,7 @@ jobs:
       id: package
       run: |
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
-        ./scripts/gen_config.py ${build} glinet_depends
+        ./scripts/gen_config.py ${build} glinet_depends default-settings
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         ./scripts/feeds update -a
         ./scripts/feeds install -a
