@@ -40,7 +40,6 @@ packages:
   - luci-app-ramfree
   - luci-app-serverchan
   - luci-app-ssr-plus
-  - luci-app-store
   - luci-app-transmission
   - luci-app-unblockmusic
   - luci-app-unblockneteasemusic-go
