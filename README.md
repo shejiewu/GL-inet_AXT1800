@@ -15,7 +15,7 @@ GL-inet_AXT1800
 │   ├── build-glinet-axt1800.yml      云编译 AXT1800 4.X内核固件
 │   ├── generate-config.yml           云生成 `build-glinet-axt1800-5.4.yml` & `build-glinet-axt1800.yml`
 ├── scripts
-│   ├── build.sh                  本地编译脚本，必须在项目根目录下执行 `chmod -R 777 scripts && ./scripts/build.sh`
+│   ├── build.sh                  本地编译脚本，必须在项目根目录下执行 `cd GL-inet_AXT1800 && chmod -R 755 scripts && ./scripts/build.sh`
 │   ├── feeds.js                  feeds 第三方仓库地址配置
 │   ├── generate.js               云生成 `build-glinet-axt1800-5.4.yml` & `build-glinet-axt1800.yml` 脚本(每天11点定时执行，代码提交也会自动执行)
 │   ├── packages.js               packages 第三方软件包配置
