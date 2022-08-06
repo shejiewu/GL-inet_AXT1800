@@ -15,7 +15,7 @@ GL-inet_AXT1800
 │   ├── build-glinet-axt1800.yml      云编译 AXT1800 4.X内核固件
 │   ├── generate-config.yml           云生成 `build-glinet-axt1800-5.4.yml` & `build-glinet-axt1800.yml`
 ├── scripts
-│   ├── build.sh                  本地编译脚本，必须在项目根目录下执行 `cd GL-inet_AXT1800 && chmod -R 755 scripts && ./scripts/build.sh`
+│   ├── build.sh                  本地编译脚本，必须在项目根目录下执行，使用 `cd GL-inet_AXT1800 && chmod -R 755 scripts && ./scripts/build.sh`
 │   ├── feeds.js                  feeds 第三方仓库地址配置
 │   ├── generate.js               云生成 `build-glinet-axt1800-5.4.yml` & `build-glinet-axt1800.yml` 脚本(每天11点定时执行，代码提交也会自动执行)
 │   ├── packages.js               packages 第三方软件包配置
@@ -37,6 +37,10 @@ GL-inet_AXT1800
 - 历史版本在 `Actions` 中选择一个已经运行完成且成功的 `workflow` 在页面底部可以看到 `Annotations` 和 `Artifacts`
 - `Annotations` 中的网盘失效时间一般是 1-3 天, `Artifacts` 需要登录 Github 才能下载
 - `Actions` 运行需要设置 `Actions Secrets`, 查看[配置令牌](#配置令牌)
+- *本地编译：
+- 1、`sudo apt install build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools python3-yaml`
+- 2、`git clone https://github.com/shejiewu/GL-inet_AXT1800.git`
+- 3、`cd GL-inet_AXT1800 && chmod -R 755 scripts && ./scripts/build.sh`
 
 ## 配置令牌
 
