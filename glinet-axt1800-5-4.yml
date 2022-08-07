@@ -14,9 +14,9 @@ feeds:
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
   - name: default-settings
-    uri: ../feeds_dir/default-settings
+    path: ../feeds_dir/default-settings
   - name: default-settings
-    uri: ../feeds_dir/default-settings
+    path: ../feeds_dir/default-settings
 include:
   - wifi-ax
 packages:
