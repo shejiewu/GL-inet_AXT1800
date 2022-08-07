@@ -39,7 +39,7 @@ const exec = require('child_process').execSync;
   exec(`rm -rf ${name}`);
    return {
     name: 'default-settings',
-    uri: '../feeds_dir/default-settings',
+    path: '../feeds_dir/default-settings',
   };
   return {
     name: name.trim(),
