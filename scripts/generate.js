@@ -67,6 +67,7 @@ const GenerateYml = (workflows) => {
       return index - keys.indexOf(b);
     }
     // 生成 feeds 配置
+    const feeds = require('./feeds').map(item => GenerateFeedsConfig(item.name, item.path));
     const feeds = require('./feeds').map(item => GenerateFeedsConfig(item.name, item.uri, item.branch));
 
     // 生成 packages 配置
