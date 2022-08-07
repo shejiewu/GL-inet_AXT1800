@@ -89,8 +89,8 @@ module.exports = [
     name: 'luci-compat',
     desc: 'Compat依赖',
   },
-  // {
-  //   name: 'default-settings',
-  //   desc: 'DIY 配置信息',
-  // },
+  {
+    name: 'diysettings',
+    desc: 'DIY 配置信息',
+  },
 ];
