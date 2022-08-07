@@ -99,7 +99,7 @@ sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
 
 #AdGuardHome配置
-echo "bind_host: 0.0.0.0
+echo 'bind_host: 0.0.0.0
 bind_port: 3000
 beta_bind_port: 0
 users: []
@@ -251,10 +251,23 @@ os:
   group: ""
   user: ""
   rlimit_nofile: 0
-schema_version: 14" > /etc/adguardhome.yaml
+schema_version: 14' > /etc/adguardhome.yaml
 
-echo "
-config adguardhome 'config'
-	option enabled '1'" > /etc/config/AdGuardHome
+
+echo "config AdGuardHome 'AdGuardHome'
+	option httpport '3000'
+	option configpath '/etc/adguardhome.yaml'
+	option workdir '/etc/AdGuardHome'
+	option logfile '/tmp/AdGuardHome.log'
+	option verbose '0'
+	option binpath '/usr/bin/AdGuardHome'
+	option redirect 'dnsmasq-upstream'
+	option waitonboot '1'
+	option ucitracktest '1'
+	option enabled '1'
+	list old_redirect 'dnsmasq-upstream'
+	list old_port '3053'
+	list old_enabled '1'" > /etc/config/AdGuardHome
+
 
 exit 0
