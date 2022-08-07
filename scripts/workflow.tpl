@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 #  push:
-#    paths:
+    paths:
       - '.github/workflows/${workflowName}.yml'
       - '${build}.yml'
     branches:
