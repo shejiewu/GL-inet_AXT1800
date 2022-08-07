@@ -33,7 +33,7 @@ env:
   REPO_URL: https://github.com/gl-inet/gl-infra-builder
   REPO_BRANCH: main
   UPLOAD_BIN_DIR: true
-  UPLOAD_FIRMWARE: true
+  UPLOAD_FIRMWARE: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
