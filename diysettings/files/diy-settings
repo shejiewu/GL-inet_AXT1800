@@ -9,9 +9,6 @@ uci set system.@system[0].timezone=CST-8
 uci set system.@system[0].zonename=Asia/Shanghai
 uci commit system
 
-#将默认的bootstrap主题替换为arogn主题
-sed -i 's|bootstrap|argon|' /etc/config/luci
-
 #系统温度调整
 uci set glfan.@globals[0].temperature='60'
 uci set glfan.@globals[0].intergration='4'
@@ -24,10 +21,6 @@ uci commit fstab
 
 #关闭wget历史记录跟踪
 echo 'hsts=0' > /root/.wgetrc
-
-#设置dnsmasq的日志路径
-sed -i '/log-facility/d' /etc/dnsmasq.conf
-echo 'log-facility=/dev/null' >> /etc/dnsmasq.conf
 
 #iptables设置
 sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
@@ -106,7 +99,7 @@ sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
 
 #AdGuardHome配置
-echo 'bind_host: 0.0.0.0
+echo "bind_host: 0.0.0.0
 bind_port: 3000
 beta_bind_port: 0
 users: []
@@ -258,10 +251,10 @@ os:
   group: ""
   user: ""
   rlimit_nofile: 0
-schema_version: 14' > /etc/adguardhome.yaml
+schema_version: 14" > /etc/adguardhome.yaml
 
-echo '
+echo "
 config adguardhome 'config'
-	option enabled '1'' > /etc/config/AdGuardHome
+	option enabled '1'" > /etc/config/AdGuardHome
 
 exit 0
