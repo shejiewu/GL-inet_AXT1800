@@ -79,7 +79,7 @@ jobs:
     - name: Download package
       id: package
       run: |
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/feeds/default-settings
+        # cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/feeds/default-settings
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
         ./scripts/gen_config.py ${build} glinet_depends
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
