@@ -1,30 +1,18 @@
 #!/bin/bash
 PWD=$(pwd)
 
-echo "请选择构建设备："
-echo "1. AX1800 - 4.X内核"
-echo "2. AXT1800 - 4.X内核"
-echo "3. AX1800 - 5.X内核"
-echo "4. AXT1800 - 5.X内核"
+echo " 请选择构建设备："
+echo "1. AXT1800 - 4.X内核"
+echo "2. AXT1800 - 5.X内核"
 read input
 
 case $input in
 1)
-		echo "构建AX1800 - 4.X内核"
-		DEVICE="ax1800"
-		DEVICE1="wlan-ap"
-		;;
-2)
 		echo "构建AXT1800 - 4.X内核"
 		DEVICE="axt1800"
 		DEVICE1="wlan-ap"
 		;;
-3)
-		echo "构建AX1800 - 5.X内核"
-		DEVICE="ax1800"
-		DEVICE1="wlan-ap-5.4"
-		;;
-4)
+2)
 		echo "构建AXT1800 - 5.X内核"
 		DEVICE="axt1800"
 		DEVICE1="wlan-ap-5.4"
