@@ -7,9 +7,9 @@
 
 module.exports = [
   {
-  //   name: 'immortalwrt_luci',
-  //   uri: 'https://github.com/immortalwrt/luci.git',
-  //   branch: 'openwrt-21.02',
+    name: 'immortalwrt_luci',
+    uri: 'https://github.com/immortalwrt/luci.git',
+    branch: 'openwrt-21.02',
   },
   {
     name: 'NueXini_Packages',
