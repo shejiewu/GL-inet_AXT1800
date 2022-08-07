@@ -38,14 +38,14 @@ const exec = require('child_process').execSync;
   exec(`cd ..`);
   exec(`rm -rf ${name}`);
   return {
+    name: 'default-settings',
+    path: '../feeds_dir/default-settings',
+  };
+  return {
     name: name.trim(),
     uri: uri.trim(),
     branch: branch.trim(),
     revision: revision.trim(),
-  };
-  return {
-    name: 'default-settings',
-    path: '../feeds_dir/default-settings',
   };
 }
 
@@ -67,7 +67,6 @@ const GenerateYml = (workflows) => {
       return index - keys.indexOf(b);
     }
     // 生成 feeds 配置
-    const feeds = require('./feeds').map(item => GenerateFeedsConfig(item.name, item.path));
     const feeds = require('./feeds').map(item => GenerateFeedsConfig(item.name, item.uri, item.branch));
 
     // 生成 packages 配置
