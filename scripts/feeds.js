@@ -7,10 +7,6 @@
 
 module.exports = [
   {
-    name: 'default-settings',
-    path: '../feeds_dir/default-settings',
-  },
-  {
     name: 'immortalwrt_luci',
     uri: 'https://github.com/immortalwrt/luci.git',
     branch: 'openwrt-21.02',
