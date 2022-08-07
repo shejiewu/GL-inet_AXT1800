@@ -23,8 +23,6 @@ feeds:
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
     revision: 1840bd4b96aa91bc8ffcded5f4ee5db66995291e
-  - name: diysettings
-    path: ../feeds_dir/diysettings
 include: []
 packages:
   - kmod-hwmon-pwmfan
