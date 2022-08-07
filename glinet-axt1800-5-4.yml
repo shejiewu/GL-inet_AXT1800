@@ -14,7 +14,7 @@ feeds:
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
   - name: diysettings
-    path: ../../feeds/diysettings
+    path: ../feeds_dir/diysettings
 include:
   - wifi-ax
 packages:
