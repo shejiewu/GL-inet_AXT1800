@@ -82,13 +82,13 @@ jobs:
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
         ./scripts/gen_config.py ${build} glinet_depends
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/package/feeds/NueXini_Packages/default-settings
+        cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
+        echo "$(date +"%Y.%m.%d")" >./glversion
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         make defconfig
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/files
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/default-settings ~/work/GL-inet_AXT1800/GL-inet_AXT1800/gl-infra-builder/wlan-ap/openwrt/package/feeds/luci/default-settings
-        cd /workdir/gl-infra-builder/wlan-ap/openwrt/files/etc
-        echo "$(date +"%Y.%m.%d")" >./glversion
 
     - name: SSH connection to Actions
       uses: P3TERX/ssh2actions@v1.0.0
