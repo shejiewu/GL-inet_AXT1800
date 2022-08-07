@@ -32,14 +32,16 @@ const exec = require('child_process').execSync;
  * @param {*} branch
  * @returns
  */
+return {
+    name: 'default-settings',
+    path: '../feeds_dir/default-settings',
+  };
  const GenerateFeedsConfig = (name, uri, branch) => {
   exec(`git clone --depth=1 ${uri} -b ${branch} ${name}`);
   const revision = exec(`cd ${name} && git log -1 --pretty=%H`).toString().trim();
   exec(`cd ..`);
   exec(`rm -rf ${name}`);
   return {
-    name: 'default-settings',
-    path: '../feeds_dir/default-settings',
     name: name.trim(),
     uri: uri.trim(),
     branch: branch.trim(),
