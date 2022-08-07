@@ -1,32 +1,40 @@
 #!/bin/sh
-# luci 语言设置
-uci set luci.main.lang=zh_cn  # 设置 luci 界面语言为中文
-uci commit luci  # 提交修改
-# 系统时区设置
-uci set system.@system[0].timezone=CST-8  # 设置系统时区为东八区
-uci set system.@system[0].zonename=Asia/Shanghai  # 设置区域为上海
-uci commit system  # 提交修改
-# luci 主题设置
-sed -i "s|bootstrap|argon|" /etc/config/luci  # 将默认的 bootstrap 主题替换为 arogn 主题
-# 系统温度调整
-uci set glfan.@globals[0].temperature='50'  # 风扇启动温度
-uci set glfan.@globals[0].intergration='4'  # 风扇持续时间
-uci set glfan.@globals[0].differential='20'  # 温控算法
-uci commit glfan  # 提交修改
-# fstab 设置
-# https://openwrt.org/zh-cn/doc/uci/fstab
-uci set fstab.@global[0].anon_mount=1  # 设置 fstab，开启热插拔自动挂载
-uci commit fstab  # 提交修改
-echo 'hsts=0' > /root/.wgetrc  # 关闭 wget 历史记录跟踪
-# 设置 dnsmasq 的日志路径
-# https://stackoverflow.com/questions/47548271/disable-wget-history-tracking
+
+#设置 luci界面语言为中文
+uci set luci.main.lang=zh_cn
+uci commit luci
+
+#系统时区设置
+uci set system.@system[0].timezone=CST-8
+uci set system.@system[0].zonename=Asia/Shanghai
+uci commit system
+
+#将默认的bootstrap主题替换为arogn主题
+sed -i 's|bootstrap|argon|' /etc/config/luci
+
+#系统温度调整
+uci set glfan.@globals[0].temperature='60'
+uci set glfan.@globals[0].intergration='4'
+uci set glfan.@globals[0].differential='20'
+uci commit glfan
+
+#设置fstab开启热插拔自动挂载
+uci set fstab.@global[0].anon_mount=1
+uci commit fstab
+
+#关闭wget历史记录跟踪
+echo 'hsts=0' > /root/.wgetrc
+
+#设置dnsmasq的日志路径
 sed -i '/log-facility/d' /etc/dnsmasq.conf
-echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
-# iptables 设置
-sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user  # 53 端口重定向
-echo "iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user  # udp 53 端口重定向
-echo "iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53" >> /etc/firewall.user  # tcp 53 端口重定向
-# 无线配置
+echo 'log-facility=/dev/null' >> /etc/dnsmasq.conf
+
+#iptables设置
+sed -i '/REDIRECT --to-ports 53/d' /etc/firewall.user
+echo 'iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
+echo 'iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
+
+#无线配置
 uci set wireless.radio0=wifi-device
 uci set wireless.radio0.type='mac80211'
 uci set wireless.radio0.path='platform/soc/c000000.wifi'
@@ -93,10 +101,11 @@ uci set wireless.guest2g.isolate='1'
 uci set wireless.guest2g.ssid='GL-AXT1800-2.4G-Guest'
 uci set wireless.guest2g.encryption='sae-mixed'
 uci set wireless.guest2g.key='00000000'
-uci commit wireless  # 提交修改
-# 默认开启无线
+uci commit wireless
 sed -i '/option disabled/d' /etc/config/wireless
 sed -i '/set wireless.radio${devidx}.disabled/d' /lib/wifi/mac80211.sh
+
+#AdGuardHome配置
 echo 'bind_host: 0.0.0.0
 bind_port: 3000
 beta_bind_port: 0
@@ -250,10 +259,9 @@ os:
   user: ""
   rlimit_nofile: 0
 schema_version: 14' > /etc/adguardhome.yaml
-echo "
+
+echo '
 config adguardhome 'config'
-	option enabled '1'" > /etc/config/AdGuardHome 
-# 解决 cron 定时重启死循环问题
-# https://openwrt.org/zh/docs/guide-user/base-system/cron
-echo "#30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /etc/crontabs/root
+	option enabled '1'' > /etc/config/AdGuardHome
+
 exit 0
