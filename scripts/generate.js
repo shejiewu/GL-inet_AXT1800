@@ -37,7 +37,7 @@ const exec = require('child_process').execSync;
   const revision = exec(`cd ${name} && git log -1 --pretty=%H`).toString().trim();
   exec(`cd ..`);
   exec(`rm -rf ${name}`);
-  echo -e "name: 'diysettings', \n path: '../feeds_dir/diysettings',"
+  
   return {
     name: name.trim(),
     uri: uri.trim(),
