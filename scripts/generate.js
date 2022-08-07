@@ -40,8 +40,6 @@ const exec = require('child_process').execSync;
   return {
     name: 'diysettings'.trim(),
     path: '../feeds_dir/diysettings'.trim(),
-  };
-  return {
     name: name.trim(),
     uri: uri.trim(),
     branch: branch.trim(),
