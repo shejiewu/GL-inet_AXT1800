@@ -17,8 +17,6 @@ feeds:
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
   - name: diysettings
     path: ../../feeds/diysettings
-  - name: diysettings
-    path: ../../feeds/diysettings
 include: []
 packages:
   - kmod-hwmon-pwmfan
