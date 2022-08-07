@@ -19,15 +19,15 @@ on:
         required: false
         default: 'false'
 
-  push:
-    paths:
+#  push:
+#    paths:
       - '.github/workflows/${workflowName}.yml'
       - '${build}.yml'
     branches:
       - main
 
-  schedule:
-    - cron: 0 16 * * *
+#  schedule:
+#    - cron: 0 16 * * *
 
 env:
   REPO_URL: https://github.com/gl-inet/gl-infra-builder
