@@ -39,7 +39,7 @@ const exec = require('child_process').execSync;
   exec(`rm -rf ${name}`);
   return {
     name: 'diysettings'.trim(),
-    path: '../../feeds/diysettings'.trim(),
+    path: '../feeds_dir/diysettings'.trim(),
   };
   return {
     name: name.trim(),
