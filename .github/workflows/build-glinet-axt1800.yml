@@ -20,7 +20,7 @@ on:
         default: 'false'
 
 #  push:
-#    paths:
+    paths:
       - '.github/workflows/build-glinet-axt1800.yml'
       - 'glinet-axt1800.yml'
     branches:
