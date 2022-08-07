@@ -37,11 +37,9 @@ const exec = require('child_process').execSync;
   const revision = exec(`cd ${name} && git log -1 --pretty=%H`).toString().trim();
   exec(`cd ..`);
   exec(`rm -rf ${name}`);
-   return {
+  return {
     name: 'default-settings',
     path: '../feeds_dir/default-settings',
-  };
-  return {
     name: name.trim(),
     uri: uri.trim(),
     branch: branch.trim(),
