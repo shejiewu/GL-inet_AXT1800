@@ -85,6 +85,7 @@ jobs:
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ files
         echo "$(date +"%Y.%m.%d")" >./files/etc/glversion
+        echo "Bulid  By@shejiewu" >./files/etc/version.type
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         make defconfig
