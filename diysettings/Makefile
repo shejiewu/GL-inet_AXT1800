@@ -31,7 +31,7 @@ endef
 
 define Package/diysettings/install
 	$(INSTALL_DIR) $(1)/etc/uci-defaults
-	$(INSTALL_BIN) ./files/diy-settings $(1)/etc/uci-defaults/99-default-settings
+	$(INSTALL_BIN) ./files/diysettings $(1)/etc/uci-defaults/99-default-settings
 endef
 
 $(eval $(call BuildPackage,diysettings))
