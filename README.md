@@ -37,7 +37,7 @@ GL-inet_AXT1800
 - 历史版本在 `Actions` 中选择一个已经运行完成且成功的 `workflow` 在页面底部可以看到 `Annotations` 和 `Artifacts`
 - `Annotations` 中的网盘失效时间一般是 1-3 天, `Artifacts` 需要登录 Github 才能下载
 - `Actions` 运行需要设置 `Actions Secrets`, 查看[配置令牌](#配置令牌)
-## 本地编译流程
+## 本地编译流程（非root用户）
 - 1、`sudo apt install build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools python3-yaml`
 - 2、`git clone https://github.com/shejiewu/GL-inet_AXT1800.git`
 - 3、`cd GL-inet_AXT1800 && chmod -R 755 scripts && ./scripts/build.sh`
