@@ -90,7 +90,7 @@ module.exports = [
     desc: 'Compat依赖',
   },
   {
-    name: 'diysettings',
+    name: 'defaultsettings',
     desc: 'DIY 配置信息',
   },
 ];

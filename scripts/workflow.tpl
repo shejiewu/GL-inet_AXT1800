@@ -20,11 +20,11 @@ on:
         default: 'false'
 
 #  push:
-    paths:
-      - '.github/workflows/${workflowName}.yml'
-      - '${build}.yml'
-    branches:
-      - main
+#    paths:
+#      - '.github/workflows/${workflowName}.yml'
+#      - '${build}.yml'
+#    branches:
+#      - main
 
 #  schedule:
 #    - cron: 0 16 * * *
@@ -75,8 +75,8 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@github.com"
         python3 setup.py -c configs/${config}.yml
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/diysettings/ ./feeds/diysettings
-        chmod -R 775 ./feeds/diysettings
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/diysettings/ ./wlan-ap/feeds/diysettings
+        chmod -R 775 ./wlan-ap/feeds/diysettings
 
     - name: Download package
       id: package
@@ -84,9 +84,8 @@ jobs:
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
         ./scripts/gen_config.py ${build} glinet_depends
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ files
+        cp -r ~/work/GL-inet_AXT1800/etc/ files
         echo "$(date +"%Y.%m.%d")" >./files/etc/glversion
-        echo "Bulid  By@shejiewu" >./files/etc/version.type
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         make defconfig
