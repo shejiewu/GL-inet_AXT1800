@@ -76,7 +76,7 @@ jobs:
         git config --global user.email "github-actions[bot]@github.com"
         python3 setup.py -c configs/${config}.yml
         cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/diysettings/ ./feeds/diysettings
-        chmod -R 755 ./feeds/diysettings
+        chmod -R 775 ./feeds/diysettings
 
     - name: Download package
       id: package
