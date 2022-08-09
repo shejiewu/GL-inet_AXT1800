@@ -83,7 +83,7 @@ jobs:
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
         ./scripts/gen_config.py ${build} glinet_depends
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
-        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ files
+        cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ ./package/base-files/files
         echo "$(date +"%Y.%m.%d")" >./package/base-files/files/etc/glversion
         echo " Bulid By @shejiewu " >./package/base-files/files/etc/version.type
         ./scripts/feeds update -a
