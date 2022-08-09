@@ -253,21 +253,9 @@ os:
   rlimit_nofile: 0
 schema_version: 14' > /etc/adguardhome.yaml
 
-
-echo "config AdGuardHome 'AdGuardHome'
-	option httpport '3000'
-	option configpath '/etc/adguardhome.yaml'
-	option workdir '/etc/AdGuardHome'
-	option logfile '/tmp/AdGuardHome.log'
-	option verbose '0'
-	option binpath '/usr/bin/AdGuardHome'
-	option redirect 'dnsmasq-upstream'
-	option waitonboot '1'
-	option ucitracktest '1'
-	option enabled '1'
-	list old_redirect 'dnsmasq-upstream'
-	list old_port '3053'
-	list old_enabled '1'" > /etc/config/AdGuardHome
+echo "
+config adguardhome 'config'
+	option enabled '0'" > /etc/config/AdGuardHome
 
 echo "#30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /etc/crontabs/root
 
