@@ -1,10 +1,10 @@
 /**
  * 字段说明
- * @name 工作流文件名 可留空（留空自动生成为 build-glnet-型号）
- * @model 设备型号
+ * @name   工作流文件名 可留空（留空自动生成为 build-glnet-型号）
+ * @model  设备型号
  * @config 官方 wlan-ap配置文件名称 profiles 目录下
  * @target 官方 target_wlan_ap 配置文件名称 profiles 目录下
- * @build 生成自定义的编译文件 可留空（留空自动生成为 glnet-型号）
+ * @build  生成自定义的编译文件 可留空（留空自动生成为 glnet-型号）
  */
  module.exports = [
   {
