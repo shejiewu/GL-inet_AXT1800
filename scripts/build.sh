@@ -37,7 +37,7 @@ cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
 ## cd $PWD/gl-infra-builder && python3 setup.py -c configs/config-wlan-ap.yml
 cd $PWD/gl-infra-builder && python3 setup.py -c configs/config-$DEVICE1.yml
 
-cp -r ~/GL-inet_AXT1800/diysettings/ ./feeds/diysettings/
+cp -r ~/GL-inet_AXT1800/diysettings/ ./wlan-ap/openwrt/package/diysettings
 
 ## cd wlan-ap/openwrt && ./scripts/gen_config.py $PWD/profiles/glinet-axt1800 glinet_depends
 cd wlan-ap/openwrt && ./scripts/gen_config.py $PWD/profiles/glinet-$DEVICE glinet_depends
