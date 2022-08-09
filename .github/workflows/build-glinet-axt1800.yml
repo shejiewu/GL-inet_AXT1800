@@ -75,7 +75,6 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@github.com"
         python3 setup.py -c configs/config-wlan-ap.yml
-       ## cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/diysettings/ ./wlan-ap/openwrt/package/diysettings
 
     - name: Download package
       id: package
@@ -85,7 +84,7 @@ jobs:
         git clone https://github.com/gl-inet/glinet4.x.git -b main /workdir/glinet
         cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ ./package/base-files/files
         echo "$(date +"%Y.%m.%d")" >./package/base-files/files/etc/glversion
-        echo " Bulid By @shejiewu " >./package/base-files/files/etc/version.type
+        echo " Bulid By@shejiewu " >./package/base-files/files/etc/version.type
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         make defconfig
