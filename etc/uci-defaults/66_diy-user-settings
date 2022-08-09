@@ -1,4 +1,4 @@
-./bin/sh
+#!/bin/bash
 
 #设置 luci界面语言为中文
 uci set luci.main.lang=zh_cn
