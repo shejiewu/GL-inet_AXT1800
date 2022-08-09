@@ -7,22 +7,16 @@ image: bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_axt1800-squashfs-sysup
 feeds:
   - name: ipq807x
     path: ../../feeds/ipq807x
-  - name: diysettings
-    path: ../feeds_dir/diysettings
   - name: gl_feeds_common
     uri: https://github.com/gl-inet/gl-feeds.git
     revision: 6d36fa8b49061674c709c40b8c3ed5881be3190a
   - name: luci
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
-  - name: immortalwrt_luci
-    uri: https://github.com/immortalwrt/luci.git
-    branch: openwrt-21.02
-    revision: 081ae7d4e18d6795a3c906bd793b5db41035baaa
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: a6c2125bebe471a629920f902a5b87bbf5d9b6e8
+    revision: c5bf4b71f36c870d31df1c6c08d3bba47f329ea3
 include:
   - wifi-ax
 packages:
