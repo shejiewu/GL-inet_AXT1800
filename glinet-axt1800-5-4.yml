@@ -7,8 +7,6 @@ image: bin/targets/ipq807x/ipq60xx/openwrt-ipq807x-glinet_axt1800-squashfs-sysup
 feeds:
   - name: ipq807x
     path: ../../feeds/ipq807x
-  - name: diysettings
-    path: ../package/diysettings
   - name: gl_feeds_common
     uri: https://github.com/gl-inet/gl-feeds.git
     revision: 6d36fa8b49061674c709c40b8c3ed5881be3190a
@@ -44,4 +42,3 @@ packages:
   - luci-app-wol
   - luci-app-wrtbwmon
   - luci-compat
-  - defaultsettings
