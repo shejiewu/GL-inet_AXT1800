@@ -5,11 +5,11 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
-  push:
-    paths:
-      - 'scripts/*'
-    branches:
-      - main
+#  push:
+#    paths:
+#      - 'scripts/*'
+#    branches:
+#      - main
 
 
 #  schedule:
