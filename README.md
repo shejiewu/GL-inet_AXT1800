@@ -40,7 +40,7 @@ GL-inet_AXT1800
 ## 本地编译流程（非root用户）
 - 1、`sudo apt install build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools python3-yaml`
 - 2、`git clone https://github.com/shejiewu/GL-inet_AXT1800.git GL-inet_AXT1800`
-- 3、`cd GL-inet_AXT1800 && chmod -R 755 scripts && ./scripts/build.sh`
+- 3、`cd GL-inet_AXT1800 && chmod -R 775 scripts && ./scripts/build.sh`
 - 4、 输入数字选择型号内核build
 
 ## 配置令牌
