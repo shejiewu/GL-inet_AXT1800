@@ -15,14 +15,10 @@ feeds:
   - name: luci
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
-  - name: immortalwrt_luci
-    uri: https://github.com/immortalwrt/luci.git
-    branch: openwrt-21.02
-    revision: 14e97884eba4614de7fb31ac8e684995ab31ece1
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: e2a5de7e648e9cd633f136c107d3649c120c39f8
+    revision: 80038de62cc9d07c002fa94d28b2fb61ac745f4a
 include: []
 packages:
   - kmod-hwmon-pwmfan
