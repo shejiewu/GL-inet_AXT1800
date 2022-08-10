@@ -51,4 +51,5 @@ echo " Bulid By@shejiewu " >./package/base-files/files/etc/version.type
 make defconfig
 
 echo -e "$(nproc) thread compile"
-make -j$(expr $(nproc) + 1) GL_PKGDIR=$PWD/glinet/ipq60xx/ V=s
+## make -j$(expr $(nproc) + 1) GL_PKGDIR=$PWD/glinet/ipq60xx/ V=s
+make -j1 GL_PKGDIR=$PWD/glinet/ipq60xx/ V=s
