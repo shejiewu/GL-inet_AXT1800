@@ -7,19 +7,16 @@ echo "2. AXT1800 - 5.X内核"
 read input
 
 case $input in
-
 1)
 		echo "编译AXT1800 - 4.X内核"
-		DEVICE="axt1800"
-		DEVICE1="wlan-ap"
-		;;
-		
+		DEVICE0="wlan-ap"
+		DEVICE1="axt1800"
+		;;	
 2)
 		echo "编译AXT1800 - 5.X内核"
-		DEVICE="axt1800"
-		DEVICE1="wlan-ap-5.4"
+		DEVICE0="wlan-ap-5.4"
+		DEVICE1="axt1800-5-4"
 		;;
-		
 		*) echo '请输入“1”或“2”（不带引号）选择，您的选择错误，脚本已退出，请重新启动脚本！！'
 		   echo '  '
 		   exit
@@ -30,10 +27,10 @@ git clone https://github.com/gl-inet/gl-infra-builder.git $PWD/gl-infra-builder
 cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
 
 ## cd $PWD/gl-infra-builder && python3 setup.py -c configs/config-wlan-ap.yml
-cd $PWD/gl-infra-builder && python3 setup.py -c configs/config-$DEVICE1.yml
+cd $PWD/gl-infra-builder && python3 setup.py -c configs/config-$DEVICE0.yml
 
 ## cd wlan-ap/openwrt && ./scripts/gen_config.py $PWD/profiles/glinet-axt1800 glinet_depends
-cd wlan-ap/openwrt && ./scripts/gen_config.py $PWD/profiles/glinet-$DEVICE glinet_depends
+cd wlan-ap/openwrt && ./scripts/gen_config.py $PWD/profiles/glinet-$DEVICE1 glinet_depends
 
 git clone https://github.com/gl-inet/glinet4.x.git -b main $PWD/glinet
 
