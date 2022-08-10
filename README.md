@@ -51,7 +51,7 @@ GL-inet_AXT1800
 
 
 ## Credits
-
+- [NueXini/NueXini_Packages](https://github.com/NueXini/NueXini_Packages)
 - [Draco-China/Draco-OpenWrt-GL-AX1800](https://github.com/draco-china/Draco-OpenWrt-GL-AX1800)
 - [Microsoft Azure](https://azure.microsoft.com)
 - [GitHub Actions](https://github.com/features/actions)
