@@ -20,6 +20,10 @@ case $input in
 		DEVICE1="wlan-ap-5.4"
 		;;
 		
+		*) echo '请输入“1”或“2”（不带引号）选择，您的选择错误，脚本已退出，请重新启动脚本！！'
+		   echo '  '
+		   exit
+                ;;
 esac
 
 git clone https://github.com/gl-inet/gl-infra-builder.git $PWD/gl-infra-builder
