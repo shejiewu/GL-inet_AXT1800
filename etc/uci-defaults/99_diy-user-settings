@@ -258,9 +258,19 @@ os:
   rlimit_nofile: 0
 schema_version: 14' >> /etc/adguardhome.yaml
 
-echo "
-config adguardhome 'config'
+echo "config adguardhome 'config'
 	option enabled '0'" >> /etc/config/AdGuardHome
+
+echo "config global
+	option primary '#5e72e4'
+	option dark_primary '#483d8b'
+	option blur '10'
+	option blur_dark '10'
+	option transparency '0.5'
+	option transparency_dark '0.5'
+	option bing_background '0'
+	option save '保存更改'
+	option mode 'dark'" >> /etc/config/argon
 
 # 解决mwan3因找不到ip命令而无法启动的问题 
 ln -sf /sbin/ip /usr/bin/ip
