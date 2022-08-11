@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 编译环境准备
+    - name: 编译系统环境准备
       uses: actions/checkout@main
 
     - name: Initialization environment
@@ -76,7 +76,7 @@ jobs:
         git config --global user.email "github-actions[bot]@github.com"
         python3 setup.py -c configs/${config}.yml
 
-    - name: 拉取GL-Inet官方UI库
+    - name: 拉取GL-Inet官方UI库 + DIY插件库
       id: package
       run: |
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
