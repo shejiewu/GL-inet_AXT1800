@@ -20,11 +20,6 @@ uci set glfan.@globals[0].differential='20'
 uci set fstab.@global[0].anon_mount=1
 #uci commit fstab
 
-#iptables设置
-sed -i '/REDIRECT --to-ports 53/d' ../etc/firewall.user
-echo 'iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
-echo 'iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
-
 #无线配置
 uci set wireless.radio0=wifi-device
 uci set wireless.radio0.type='mac80211'
@@ -99,6 +94,11 @@ uci set wireless.guest2g.key='12345678'
 
 # 解决mwan3因找不到ip命令而无法启动的问题 
 ln -sf /sbin/ip /usr/bin/ip
+
+#iptables设置
+sed -i '/REDIRECT --to-ports 53/d' ../etc/firewall.user
+echo 'iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
+echo 'iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
 
 # 解决定时重启死循环问题
 echo "#30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /etc/crontabs/root
