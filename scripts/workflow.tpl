@@ -19,15 +19,15 @@ on:
         required: false
         default: 'false'
 
-#  push:
-#    paths:
-#      - '.github/workflows/${workflowName}.yml'
-#      - '${build}.yml'
-#    branches:
-#      - main
+  push:
+    paths:
+      - '.github/workflows/${workflowName}.yml'
+      - '${build}.yml'
+    branches:
+      - main
 
-#  schedule:
-#    - cron: 0 16 * * *
+  schedule:
+    - cron: 0 16 * * *
 
 env:
   REPO_URL: https://github.com/gl-inet/gl-infra-builder
@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: 编译环境准备
       uses: actions/checkout@main
 
     - name: Initialization environment
@@ -59,7 +59,7 @@ jobs:
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
 
-    - name: Clone source code
+    - name: 拉取GL-Inet官方配置库
       working-directory: /workdir
       run: |
         echo $PWD
@@ -69,14 +69,14 @@ jobs:
         cd $GITHUB_WORKSPACE
         [ -e ${build}.yml ] && mv ${build}.yml /workdir/gl-infra-builder/profiles
 
-    - name: run setup.py
+    - name: 执行指令setup.py
       run: |
         cd /workdir/gl-infra-builder
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@github.com"
         python3 setup.py -c configs/${config}.yml
 
-    - name: Download package
+    - name: 拉取GL-Inet官方UI库
       id: package
       run: |
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
@@ -89,14 +89,14 @@ jobs:
         ./scripts/feeds install -a
         make defconfig
         
-    - name: SSH connection to Actions
+    - name: SSH终端调试
       uses: P3TERX/ssh2actions@v1.0.0
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') || contains(github.event.action, 'ssh')
       env:
         TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
 
-    - name: Compile the firmware
+    - name: 进行编译固件
       id: compile
       run: |
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
@@ -108,18 +108,18 @@ jobs:
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
         echo "FILE_DATE=_$(date +"%Y%m%d%H%M")" >> $GITHUB_ENV
 
-    - name: Check space usage
+    - name: 检查空间使用情况
       if: (!cancelled())
       run: df -hT
 
-    - name: Upload bin directory
+    - name: 上传bin目录
       uses: actions/upload-artifact@main
       if: steps.compile.outputs.status == 'success' && env.UPLOAD_BIN_DIR == 'true'
       with:
         name: OpenWrt_bin${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: /workdir/gl-infra-builder/wlan-ap/openwrt/bin
 
-    - name: Organize files
+    - name: 整理文件
       id: organize
       if: env.UPLOAD_FIRMWARE == 'true' && !cancelled() && !failure()
       run: |
@@ -129,14 +129,14 @@ jobs:
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
         echo "::set-output name=status::success"
 
-    - name: Upload firmware directory
+    - name: 上传固件目录
       uses: actions/upload-artifact@main
       if: steps.organize.outputs.status == 'success' && !cancelled() && !failure()
       with:
         name: OpenWrt_firmware${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
         path: ${{ env.FIRMWARE }}
 
-    - name: Upload firmware to WeTransfer
+    - name: 上传固件到WeTransfer
       id: wetransfer
       if: steps.organize.outputs.status == 'success' && env.UPLOAD_WETRANSFER == 'true' && !cancelled() && !failure()
       run: |
@@ -145,7 +145,7 @@ jobs:
         echo "::warning file=wetransfer.com::$(cat wetransfer.log | grep https)"
         echo "::set-output name=url::$(cat wetransfer.log | grep https | cut -f3 -d" ")"
 
-    - name: Generate release tag
+    - name: 生成发布标签内容
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled() && !failure()
       run: |
@@ -156,7 +156,7 @@ jobs:
         echo -e ${releasePackages} >> release.txt
         echo "::set-output name=status::success"
 
-    - name: Upload firmware to release
+    - name: 上传固件到release
       uses: softprops/action-gh-release@v1
       if: steps.tag.outputs.status == 'success' && !cancelled() && !failure()
       env:
@@ -166,13 +166,13 @@ jobs:
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/*
 
-    - name: Delete workflow runs
+    - name: 删除工作流程
       uses: GitRML/delete-workflow-runs@main
       with:
         retain_days: 1
         keep_minimum_runs: 2
 
-    - name: Remove old Releases
+    - name: 删除旧版本固件
       uses: dev-drprasad/delete-older-releases@v0.2.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled() && !failure()
       with:
