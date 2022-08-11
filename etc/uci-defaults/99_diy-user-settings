@@ -90,7 +90,7 @@ uci set wireless.guest5g.isolate='1'
 uci set wireless.guest5g.disabled='1'
 uci set wireless.guest5g.ssid='GL-AXT1800-5.0G-Guest'
 uci set wireless.guest5g.encryption='sae-mixed'
-uci set wireless.guest5g.key='00000000'
+uci set wireless.guest5g.key='12345678'
 uci set wireless.guest2g=wifi-iface
 uci set wireless.guest2g.device='radio1'
 uci set wireless.guest2g.network='guest'
@@ -101,7 +101,7 @@ uci set wireless.guest2g.wds='1'
 uci set wireless.guest2g.isolate='1'
 uci set wireless.guest2g.ssid='GL-AXT1800-2.4G-Guest'
 uci set wireless.guest2g.encryption='sae-mixed'
-uci set wireless.guest2g.key='00000000'
+uci set wireless.guest2g.key='12345678'
 uci commit wireless
 
 # 解决mwan3因找不到ip命令而无法启动的问题 
