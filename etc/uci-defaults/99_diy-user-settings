@@ -5,8 +5,8 @@ uci set luci.main.lang=zh_cn
 #uci commit luci
 
 #将默认的bootstrap主题替换为arogn主题
-sed -i 's/default Bootstrap theme/default Argon theme/g' ../../package/feeds/luci/luci/Makefile
-sed -i 's/theme-bootstrap/theme-argon/g' ../../package/feeds/luci/luci/Makefile
+sed -i 's/default Bootstrap theme/default Argon theme/g' ../package/feeds/luci/luci/Makefile
+sed -i 's/theme-bootstrap/theme-argon/g' ../package/feeds/luci/luci/Makefile
 
 #系统时区设置
 uci set system.@system[0].timezone=CST-8
