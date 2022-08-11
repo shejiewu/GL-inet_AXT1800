@@ -41,7 +41,7 @@ uci set wireless.default_radio0.isolate='0'
 uci set wireless.default_radio0.hidden='0'
 uci set wireless.default_radio0.disabled='0'
 uci set wireless.default_radio0.ssid='GL-AXT1800-5.0G'
-uci set wireless.default_radio0.encryption='psk2'
+uci set wireless.default_radio0.encryption='none'
 uci set wireless.default_radio0.key='12345678'
 #uci commit wireless
 uci set wireless.radio1=wifi-device
@@ -64,7 +64,7 @@ uci set wireless.default_radio1.isolate='0'
 uci set wireless.default_radio1.hidden='0'
 uci set wireless.default_radio1.disabled='0'
 uci set wireless.default_radio1.ssid='GL-AXT1800-2.4G'
-uci set wireless.default_radio1.encryption='psk2'
+uci set wireless.default_radio1.encryption='none'
 uci set wireless.default_radio1.key='12345678'
 #uci commit wireless
 uci set wireless.guest5g=wifi-iface
@@ -76,7 +76,7 @@ uci set wireless.guest5g.disabled='1'
 uci set wireless.guest5g.wds='1'
 uci set wireless.guest5g.isolate='1'
 uci set wireless.guest5g.ssid='GL-AXT1800-5.0G-Guest'
-uci set wireless.guest5g.encryption='psk2'
+uci set wireless.guest5g.encryption='none'
 uci set wireless.guest5g.key='12345678'
 #uci commit wireless
 uci set wireless.guest2g=wifi-iface
@@ -88,7 +88,7 @@ uci set wireless.guest2g.disabled='1'
 uci set wireless.guest2g.wds='1'
 uci set wireless.guest2g.isolate='1'
 uci set wireless.guest2g.ssid='GL-AXT1800-2.4G-Guest'
-uci set wireless.guest2g.encryption='psk2'
+uci set wireless.guest2g.encryption='none'
 uci set wireless.guest2g.key='12345678'
 #uci commit wireless
 
