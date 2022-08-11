@@ -2,7 +2,7 @@
 
 #设置 luci界面语言为中文
 uci set luci.main.lang=zh_cn
-uci commit luci
+#uci commit luci
 
 #将默认的bootstrap主题替换为arogn主题
 sed -i 's/default Bootstrap theme/default Argon theme/g' ../../package/feeds/luci/luci/Makefile
@@ -11,17 +11,17 @@ sed -i 's/theme-bootstrap/theme-argon/g' ../../package/feeds/luci/luci/Makefile
 #系统时区设置
 uci set system.@system[0].timezone=CST-8
 uci set system.@system[0].zonename=Asia/Shanghai
-uci commit system
+#uci commit system
 
 #系统温度调整
 uci set glfan.@globals[0].temperature='60'
 uci set glfan.@globals[0].intergration='4'
 uci set glfan.@globals[0].differential='20'
-uci commit glfan
+#uci commit glfan
 
 #设置fstab开启热插拔自动挂载
 uci set fstab.@global[0].anon_mount=1
-uci commit fstab
+#uci commit fstab
 
 # 关闭wget历史记录跟踪
 echo 'hsts=0' > /root/.wgetrc
@@ -102,7 +102,7 @@ uci set wireless.guest2g.isolate='1'
 uci set wireless.guest2g.ssid='GL-AXT1800-2.4G-Guest'
 uci set wireless.guest2g.encryption='sae-mixed'
 uci set wireless.guest2g.key='12345678'
-uci commit wireless
+#uci commit wireless
 
 # 解决mwan3因找不到ip命令而无法启动的问题 
 ln -sf /sbin/ip /usr/bin/ip
