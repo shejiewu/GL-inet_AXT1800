@@ -1,5 +1,5 @@
 # GL-AXT1800 固件编译
-（有DIY配置，无线密码包含访客无线密码统一设置为1到8，8位）
+（有DIY配置，无线密码包含无线访客密码统一设置为1到8，8位）
 
 [![固件更新](https://img.shields.io/badge/dynamic/json?style=flat-square&label=固件更新&query=0.published_at&url=https%3A%2F%2Fapi.github.com%2Frepos%2Fshejiewu%2FGL-inet_AX1800_AXT1800%2Freleases)](https://github.com/shejiewu/GL-inet_AX1800_AXT1800/actions)
 [![仓库地址](https://img.shields.io/badge/仓库地址-点我-brightgreen?style=flat-square)](https://github.com/shejiewu/GL-inet_AX1800_AXT1800)
