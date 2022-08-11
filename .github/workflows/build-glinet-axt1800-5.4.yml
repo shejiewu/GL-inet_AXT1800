@@ -43,10 +43,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: 编译系统环境准备
+    - name: Ubuntu编译系统准备
       uses: actions/checkout@main
 
-    - name: Initialization environment
+    - name: OpenWRT编译环境准备
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
