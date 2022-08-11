@@ -20,13 +20,6 @@ uci set glfan.@globals[0].differential='20'
 uci set fstab.@global[0].anon_mount=1
 #uci commit fstab
 
-# 关闭wget历史记录跟踪
-echo 'hsts=0' > /root/.wgetrc
-
-# 设置dnsmasq的日志路径
-sed -i '/log-facility/d' /etc/dnsmasq.conf
-echo "log-facility=/dev/null" >> /etc/dnsmasq.conf
-
 #iptables设置
 sed -i '/REDIRECT --to-ports 53/d' ../etc/firewall.user
 echo 'iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
