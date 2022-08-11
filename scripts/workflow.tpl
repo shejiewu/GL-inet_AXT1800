@@ -19,12 +19,12 @@ on:
         required: false
         default: 'false'
 
-#  push:
-#    paths:
-#      - '.github/workflows/${workflowName}.yml'
-#      - '${build}.yml'
-#    branches:
-#      - main
+  push:
+    paths:
+      - '.github/workflows/${workflowName}.yml'
+      - '${build}.yml'
+    branches:
+      - main
 
   schedule:
     - cron: 0 16 * * *
