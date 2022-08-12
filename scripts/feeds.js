@@ -7,13 +7,13 @@
 
 module.exports = [
   {
-    name: 'NueXini_Packages',
-    uri: 'https://github.com/NueXini/NueXini_Packages.git',
-    branch: 'main',
-  },
-  {
     name: 'immortalwrt_luci',
     uri: 'https://github.com/immortalwrt/luci.git',
     branch: 'openwrt-21.02',
+  },
+  {
+    name: 'NueXini_Packages',
+    uri: 'https://github.com/NueXini/NueXini_Packages.git',
+    branch: 'main',
   },
 ];
