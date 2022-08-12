@@ -16,7 +16,7 @@ feeds:
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: f296ffa4ae03dad16d1b8833243c676b2bd043d0
+    revision: 73292fa75ada666abe67424e27e2d56748bfadc0
 include:
   - wifi-ax
 packages:
