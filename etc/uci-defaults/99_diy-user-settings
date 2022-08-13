@@ -2,6 +2,9 @@
 
 #设置 luci界面语言为中文
 uci set luci.main.lang=zh_cn
+#uci commit luci
+
+#设置主题为Argon
 uci set luci.main.mediaurlbase='/luci-static/argon'
 #uci commit luci
 
@@ -101,6 +104,6 @@ echo 'iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53'
 echo 'iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53' >> /etc/firewall.user
 
 # 解决定时重启死循环问题
-echo "#30 4 * * * sleep 70 && touch /etc/banner && reboot" >> /etc/crontabs/root
+echo '#30 4 * * * sleep 70 && touch /etc/banner && reboot' >> /etc/crontabs/root
 
 exit 0
