@@ -1,11 +1,9 @@
 #!/bin/bash
 PWD=$(pwd)
-
 echo "请选择编译固件的设备："
 echo "1. AXT1800 - 4.X内核"
 echo "2. AXT1800 - 5.X内核"
 read input
-
 case $input in
 1)
     echo "编译AXT1800 - 4.X内核"
@@ -22,19 +20,15 @@ case $input in
     exit
     ;;
 esac
-
 ## sudo apt install build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools python3-yaml
-
 git clone https://github.com/gl-inet/gl-infra-builder.git $PWD/gl-infra-builder
 ## cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
-
 ## cd $PWD/gl-infra-builder
 ## python3 setup.py -c configs/config-wlan-ap.yml
 cd $PWD/gl-infra-builder
 python3 setup.py -c configs/config-$DEVICE0.yml
-
+sleep 5
 pause '准备就绪，请添加自定义信息到 profiles/target_wlan_ap-gl-ax1800-common.yml 或 profiles/target_wlan_ap-gl-ax1800-common-5-4.yml 里，实现第三方插件编译一起，然后按任意键继续或不改, 任意键继续'
-
 ## cd wlan-ap/openwrt
 ## scripts/gen_config.py target_wlan_ap-gl-axt1800 glinet_depends
 cd wlan-ap/openwrt
@@ -46,6 +40,5 @@ echo " Bulid By@shejiewu " >./package/base-files/files/etc/version.type
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 make defconfig
-
 ## make -j1 GL_PKGDIR=$PWD/glinet/ipq60xx/ V=s
 make -j$(expr $(nproc) + 1) GL_PKGDIR=$PWD/glinet/ipq60xx/ V=s
