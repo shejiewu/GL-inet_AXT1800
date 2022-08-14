@@ -1,5 +1,6 @@
 #!/bin/bash
 PWD=$(pwd)
+
 echo "请选择编译固件的设备："
 echo "1. AXT1800 - 4.X内核"
 echo "2. AXT1800 - 5.X内核"
