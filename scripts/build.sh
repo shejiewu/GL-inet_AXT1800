@@ -23,22 +23,29 @@ case $input in
     ;;
 esac
 
+## sudo apt install build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools python3-yaml
+
 git clone https://github.com/gl-inet/gl-infra-builder.git $PWD/gl-infra-builder
 ## cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
 
-## cd $PWD/gl-infra-builder && python3 setup.py -c configs/config-wlan-ap.yml
-cd $PWD/gl-infra-builder && python3 setup.py -c configs/config-$DEVICE0.yml
+## cd $PWD/gl-infra-builder
+## python3 setup.py -c configs/config-wlan-ap.yml
+cd $PWD/gl-infra-builder
+python3 setup.py -c configs/config-$DEVICE0.yml
 
 read -p '准备就绪，请添加自定义信息到 profiles/target_wlan_ap-gl-ax1800-common.yml 或 profiles/target_wlan_ap-gl-ax1800-common-5-4.yml 里，实现第三方插件编译一起，然后按任意键继续或不改, 任意键继续'
 
-## cd wlan-ap/openwrt && scripts/gen_config.py target_wlan_ap-gl-axt1800 glinet_depends
-cd wlan-ap/openwrt && scripts/gen_config.py target_wlan_ap-gl-$DEVICE1 glinet_depends
-
+## cd wlan-ap/openwrt
+## scripts/gen_config.py target_wlan_ap-gl-axt1800 glinet_depends
+cd wlan-ap/openwrt
+scripts/gen_config.py target_wlan_ap-gl-$DEVICE1 glinet_depends
 git clone https://github.com/gl-inet/glinet4.x.git -b main $PWD/glinet
-
-cp -r ~/GL-inet_AXT1800/etc/ ./package/base-files/files && echo "$(date +"%Y.%m.%d")" >./package/base-files/files/etc/glversion && echo " Bulid By@shejiewu " >./package/base-files/files/etc/version.type
-
-./scripts/feeds update -a && ./scripts/feeds install -a && make defconfig
+cp -r ~/GL-inet_AXT1800/etc/ ./package/base-files/files
+echo "$(date +"%Y.%m.%d")" >./package/base-files/files/etc/glversion
+echo " Bulid By@shejiewu " >./package/base-files/files/etc/version.type
+./scripts/feeds update -a
+./scripts/feeds install -a
+make defconfig
 
 ## make -j1 GL_PKGDIR=$PWD/glinet/ipq60xx/ V=s
 make -j$(expr $(nproc) + 1) GL_PKGDIR=$PWD/glinet/ipq60xx/ V=s
