@@ -23,10 +23,10 @@ case $input in
 esac
 ## sudo apt install build-essential libncurses5-dev gawk git libssl-dev gettext zlib1g-dev swig unzip time rsync python3 python3-setuptools python3-yaml
 git clone https://github.com/gl-inet/gl-infra-builder.git $PWD/gl-infra-builder
-## cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
+cp -r $PWD/*.yml $PWD/gl-infra-builder/profiles
 cd $PWD/gl-infra-builder
 python3 setup.py -c configs/config-$DEVICE0.yml
-echo 准备就绪，请添加自定义信息到 profiles/target_wlan_ap-gl-ax1800-common.yml 或 profiles/target_wlan_ap-gl-ax1800-common-5-4.yml 里，实现第三方插件编译一起，然后按回车键继续或不改, 按回车键继续; read dummy;
+## echo 准备就绪，请添加自定义信息到 profiles/target_wlan_ap-gl-ax1800-common.yml 或 profiles/target_wlan_ap-gl-ax1800-common-5-4.yml 里，实现第三方插件编译一起，然后按回车键继续或不改, 按回车键继续; read dummy;
 cd wlan-ap/openwrt
 scripts/gen_config.py target_wlan_ap-gl-$DEVICE1 glinet_depends
 git clone https://github.com/gl-inet/glinet4.x.git -b main $PWD/glinet
