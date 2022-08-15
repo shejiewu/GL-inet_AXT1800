@@ -21,10 +21,10 @@ module.exports = [
     name: 'luci-app-autoreboot',
     desc: '支持计划重启',
   },
-  {
-    name: 'luci-app-ddns',
-    desc: '动态域名 DDNS',
-  },
+  // {
+  //   name: 'luci-app-ddns',
+  //   desc: '动态域名 DDNS',
+  // },
   {
     name: 'luci-app-ddnsto',
     desc: 'DDNSTO 内网穿透',
@@ -53,10 +53,10 @@ module.exports = [
     name: 'luci-app-ssr-plus',
     desc: 'SSR-Plus 代理',
   },
-  {
-    name: 'luci-app-transmission',
-    desc: 'Transmission下载器',
-  },
+  // {
+  //   name: 'luci-app-transmission',
+  //   desc: 'Transmission下载器',
+  // },
   {
     name: 'luci-app-unblockmusic',
     desc: '解网易云歌曲3合1',
