@@ -34,7 +34,7 @@ env:
   REPO_BRANCH: main
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
-  UPLOAD_WETRANSFER: false
+  UPLOAD_WETRANSFER: true
   UPLOAD_RELEASE: true
   TZ: Asia/Shanghai
 
