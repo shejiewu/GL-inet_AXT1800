@@ -5,7 +5,7 @@ uci set luci.main.lang=zh_cn
 #uci commit luci
 
 #设置主题为Argon
-uci set luci.main.mediaurlbase='/luci-static/argon'
+#uci set luci.main.mediaurlbase='/luci-static/argon'
 #uci commit luci
 
 #系统时区设置
