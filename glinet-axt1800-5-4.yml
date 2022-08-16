@@ -13,14 +13,14 @@ feeds:
   - name: luci
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
-  - name: immortalwrt_luci
-    uri: https://github.com/immortalwrt/luci.git
-    branch: openwrt-18.06
-    revision: 2d7399db247412331e150e73b751a29581838139
+  - name: coolsnowwolf_luci
+    uri: https://github.com/coolsnowwolf/luci.git
+    branch: master
+    revision: 9632640b2da4ec769086a4cb7058b4bde47724b6
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: 99311f81070553a6d01e479c244dd4c31562b702
+    revision: ec30ed6a06107fd6c1169a122a0bc072a1dbd55c
 include:
   - wifi-ax
 packages:

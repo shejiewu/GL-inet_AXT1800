@@ -85,8 +85,8 @@ jobs:
         cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ ./package/base-files/files
         echo "$(date +"%Y.%m.%d")" >./package/base-files/files/etc/glversion
         echo " Bulid By@shejiewu " >./package/base-files/files/etc/version.type
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
+        ./scripts/feeds update luci
+        ./scripts/feeds install -a -p luci
         make defconfig
         
     - name: SSH connection to Actions
