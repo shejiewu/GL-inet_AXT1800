@@ -6,8 +6,8 @@
  */
 module.exports = [
   {
-    name: 'luci-theme-argon',
-    desc: 'Argon主题',
+    name: 'luci-theme-argon-2102',
+    desc: 'Argon 2102主题',
   },
   {
     name: 'luci-app-argon-config',
