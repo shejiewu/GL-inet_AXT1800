@@ -15,21 +15,21 @@ feeds:
   - name: luci
     uri: https://github.com/openwrt/luci.git
     revision: 1c3b32dc1bec15e3076a447762b1c4f94eb75fb7
-  - name: coolsnowwolf_luci
-    uri: https://github.com/coolsnowwolf/luci.git
-    branch: master
-    revision: 9632640b2da4ec769086a4cb7058b4bde47724b6
+  - name: immortalwrt_luci
+    uri: https://github.com/immortalwrt/luci.git
+    branch: openwrt-21.02
+    revision: 9fc2339e0229a314b6377840b2d7376b948235b0
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: ec30ed6a06107fd6c1169a122a0bc072a1dbd55c
+    revision: f06c03b2f59995e7ff45a6031f8782bebe45daa1
 include: []
 packages:
   - kmod-hwmon-pwmfan
   - wireless-regdb
   - wget-ssl
   - kmod-wireguard-backport
-  - luci-theme-argon
+  - luci-theme-argon-2102
   - luci-app-argon-config
   - luci-app-arpbind
   - luci-app-autoreboot
