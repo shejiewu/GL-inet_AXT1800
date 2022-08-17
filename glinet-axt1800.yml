@@ -22,14 +22,14 @@ feeds:
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: f06c03b2f59995e7ff45a6031f8782bebe45daa1
+    revision: e28ddc3f0db8eb401905d75c30ea813b862bef29
 include: []
 packages:
   - kmod-hwmon-pwmfan
   - wireless-regdb
   - wget-ssl
   - kmod-wireguard-backport
-  - luci-theme-argon-2102
+  - luci-theme-argon
   - luci-app-argon-config
   - luci-app-arpbind
   - luci-app-autoreboot
