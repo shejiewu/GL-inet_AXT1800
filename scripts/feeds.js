@@ -16,4 +16,9 @@ module.exports = [
     uri: 'https://github.com/NueXini/NueXini_Packages.git',
     branch: 'main',
   },
+  {
+    name: 'eembc_coremark',
+    uri: 'https://github.com/eembc/coremark.git',
+    branch: 'main',
+  },
 ];
