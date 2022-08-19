@@ -16,11 +16,11 @@ feeds:
   - name: immortalwrt_luci
     uri: https://github.com/immortalwrt/luci.git
     branch: openwrt-21.02
-    revision: 9fc2339e0229a314b6377840b2d7376b948235b0
+    revision: fff051ef29580d59e125b182182f82a9dd5392b8
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: ce934d76e1ed3d0b7da8f21630db999b785ae8b7
+    revision: ba6312d6252f16e72e72645ea6e986c5a0db5539
   - name: eembc_coremark
     uri: https://github.com/eembc/coremark.git
     branch: main
