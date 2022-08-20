@@ -20,11 +20,7 @@ feeds:
   - name: NueXini_Packages
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
-    revision: ba6312d6252f16e72e72645ea6e986c5a0db5539
-  - name: eembc_coremark
-    uri: https://github.com/eembc/coremark.git
-    branch: main
-    revision: eefc986ebd3452d6adde22eafaff3e5c859f29e4
+    revision: f7bf4fe9c9e667b0302052acd5468039015ecd70
 include:
   - wifi-ax
 packages:
@@ -47,6 +43,5 @@ packages:
   - luci-app-vlmcsd
   - luci-app-wol
   - luci-app-wrtbwmon
-  - coremark
   - openssh-sftp-server
   - luci-compat
