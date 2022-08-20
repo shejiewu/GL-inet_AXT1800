@@ -86,10 +86,6 @@ module.exports = [
     desc: '实时流量监测',
   },
   {
-    name: 'coremark',
-    desc: 'CPU_MARK跑分',
-  },
-  {
     name: 'openssh-sftp-server',
     desc: 'SSH_SFTP链接',
   },
