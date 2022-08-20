@@ -105,6 +105,5 @@ echo 'iptables -t nat -A PREROUTING -p tcp --dport 53 -j REDIRECT --to-ports 53'
 
 # 解决定时重启死循环问题
 echo '#30 4 * * * sleep 70 && touch /etc/banner && reboot' >> /etc/crontabs/root
-echo '0 4 * * * /etc/coremark.sh' >> /etc/crontabs/root
 
 exit 0
