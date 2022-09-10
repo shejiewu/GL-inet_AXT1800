@@ -6,22 +6,22 @@ uci set luci.main.lang=zh_cn
 
 #设置主题为Argon
 uci set luci.main.mediaurlbase='/luci-static/argon'
-#uci commit luci
+uci commit luci
 
 #系统时区设置
 uci set system.@system[0].timezone=CST-8
 uci set system.@system[0].zonename=Asia/Shanghai
-#uci commit system
+uci commit system
 
 #系统温度调整
 uci set glfan.@globals[0].temperature='60'
 uci set glfan.@globals[0].intergration='4'
 uci set glfan.@globals[0].differential='20'
-#uci commit glfan
+uci commit glfan
 
 #设置fstab开启热插拔自动挂载
 uci set fstab.@global[0].anon_mount=1
-#uci commit fstab
+uci commit fstab
 
 #无线配置
 uci set wireless.radio0=wifi-device
@@ -46,7 +46,7 @@ uci set wireless.default_radio0.disabled='0'
 uci set wireless.default_radio0.ssid='GL-AXT1800-5.0G'
 uci set wireless.default_radio0.encryption='none'
 #uci set wireless.default_radio0.key='12345678'
-#uci commit wireless
+uci commit wireless
 uci set wireless.radio1=wifi-device
 uci set wireless.radio1.type='mac80211'
 uci set wireless.radio1.path='platform/soc/c000000.wifi+1'
@@ -69,7 +69,7 @@ uci set wireless.default_radio1.disabled='0'
 uci set wireless.default_radio1.ssid='GL-AXT1800-2.4G'
 uci set wireless.default_radio1.encryption='none'
 #uci set wireless.default_radio1.key='12345678'
-#uci commit wireless
+uci commit wireless
 uci set wireless.guest5g=wifi-iface
 uci set wireless.guest5g.device='radio0'
 uci set wireless.guest5g.network='guest'
@@ -81,7 +81,7 @@ uci set wireless.guest5g.isolate='1'
 uci set wireless.guest5g.ssid='GL-AXT1800-5.0G-Guest'
 uci set wireless.guest5g.encryption='none'
 #uci set wireless.guest5g.key='12345678'
-#uci commit wireless
+uci commit wireless
 uci set wireless.guest2g=wifi-iface
 uci set wireless.guest2g.device='radio1'
 uci set wireless.guest2g.network='guest'
@@ -93,7 +93,7 @@ uci set wireless.guest2g.isolate='1'
 uci set wireless.guest2g.ssid='GL-AXT1800-2.4G-Guest'
 uci set wireless.guest2g.encryption='none'
 #uci set wireless.guest2g.key='12345678'
-#uci commit wireless
+uci commit wireless
 
 # 解决mwan3因找不到ip命令而无法启动的问题 
 ln -sf /sbin/ip /usr/bin/ip
