@@ -153,7 +153,7 @@ jobs:
         touch release.txt
         echo "## 📦‍ 固件下载 | GLINET AXT1800 5.4" >> release.txt
         [ $UPLOAD_WETRANSFER = true ] && echo "- 🔗 [WeTransfer](${{ steps.wetransfer.outputs.url }})" >> release.txt
-        echo -e "## ✨ 主要功能\n1. Argon主题\n2. Argon主题设置\n3. IP/MAC绑定\n4. 支持计划重启\n5. DDNSTO 内网穿透\n6. 磁盘管理工具\n7. 网络带宽监视器\n8. 释放内存\n9. 微信/Telegram推送\n10. SSR-Plus 代理\n11. 解网易云歌曲3合1\n12. 解网易云歌曲-GO\n13. 解网易云歌曲-MINI\n14. 通用即插即用UPnP（端口自动转发）\n15. KMS服务器\n16. Wol 网络唤醒\n17. 实时流量监测\n18. SSH_SFTP链接\n19. Compat依赖" >> release.txt
+        echo -e "## ✨ 主要功能\n1. IP/MAC绑定\n2. 支持计划重启\n3. DDNSTO 内网穿透\n4. 磁盘管理工具\n5. 网络带宽监视器\n6. 释放内存\n7. 微信/Telegram推送\n8. SSR-Plus 代理\n9. 解网易云歌曲3合1\n10. 解网易云歌曲-GO\n11. 解网易云歌曲-MINI\n12. 通用即插即用UPnP（端口自动转发）\n13. KMS服务器\n14. Wol 网络唤醒\n15. 实时流量监测\n16. SSH_SFTP链接\n17. Compat依赖" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release
