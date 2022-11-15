@@ -5,14 +5,14 @@
  * @desc app 描述
  */
 module.exports = [
-  {
-    name: 'luci-theme-argon',
-    desc: 'Argon主题',
-  },
-  {
-    name: 'luci-app-argon-config',
-    desc: 'Argon主题设置',
-  },
+  // {
+  //   name: 'luci-theme-argon',
+  //   desc: 'Argon主题',
+  // },
+  // {
+  //   name: 'luci-app-argon-config',
+  //   desc: 'Argon主题设置',
+  // },
   {
     name: 'luci-app-arpbind',
     desc: 'IP/MAC绑定',
