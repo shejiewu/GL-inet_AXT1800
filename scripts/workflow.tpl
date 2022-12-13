@@ -85,8 +85,8 @@ jobs:
         cp -r ~/work/GL-inet_AXT1800/GL-inet_AXT1800/etc/ ./package/base-files/files
         echo "$(date +"%Y.%m.%d")" >./package/base-files/files/etc/glversion
         echo " Bulid By@shejiewu " >./package/base-files/files/etc/version.type
-        ./scripts/feeds update luci
-        ./scripts/feeds install -a -p luci
+        ./scripts/feeds update -a
+        ./scripts/feeds install -a
         make defconfig
         
     - name: SSH connection to Actions
@@ -101,8 +101,8 @@ jobs:
       run: |
         cd /workdir/gl-infra-builder/wlan-ap/openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(expr $(nproc) + 1) GL_PKGDIR=/workdir/glinet/ipq60xx/ V=s
-        # make -j1 GL_PKGDIR=/workdir/glinet/ipq60xx/ V=s
+        # make -j$(expr $(nproc) + 1) GL_PKGDIR=/workdir/glinet/ipq60xx/ V=s
+        make -j1 GL_PKGDIR=/workdir/glinet/ipq60xx/ V=s
         echo "::set-output name=status::success"
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
