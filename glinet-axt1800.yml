@@ -23,6 +23,10 @@ feeds:
     uri: https://github.com/NueXini/NueXini_Packages.git
     branch: main
     revision: e14c064d278c01d7c3fddd62668d9a6b09287bfc
+  - name: kiddin9
+    uri: https://github.com/kiddin9/openwrt-packages.git
+    branch: master
+    revision: 4cee0e5629cb1bfb7713e0712c79b35d2e1be444
 include: []
 packages:
   - kmod-hwmon-pwmfan
