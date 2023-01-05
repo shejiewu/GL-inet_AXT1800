@@ -16,4 +16,9 @@ module.exports = [
     uri: 'https://github.com/NueXini/NueXini_Packages.git',
     branch: 'main',
   },
+  {
+    name: 'kiddin9',
+    uri: 'https://github.com/kiddin9/openwrt-packages.git',
+    branch: 'master',
+  },
 ];
