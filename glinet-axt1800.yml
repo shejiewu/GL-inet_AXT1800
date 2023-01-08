@@ -19,14 +19,10 @@ feeds:
     uri: https://github.com/immortalwrt/luci.git
     branch: openwrt-21.02
     revision: 56f70a66dbafaf5697405135ce72bdc61d8ff3d3
-  - name: NueXini_Packages
-    uri: https://github.com/NueXini/NueXini_Packages.git
-    branch: main
-    revision: 62f1d7a76badd32eb3ed79716420bd93e9f059f1
   - name: kiddin9
     uri: https://github.com/kiddin9/openwrt-packages.git
     branch: master
-    revision: 76443bd42c85801f64b9781506ea326cdee66121
+    revision: a15d69083beb6279ddf13991bd1ec673861a201a
 include: []
 packages:
   - kmod-hwmon-pwmfan
@@ -35,19 +31,7 @@ packages:
   - kmod-wireguard-backport
   - luci-theme-argon
   - luci-app-argon-config
-  - luci-app-arpbind
-  - luci-app-autoreboot
   - luci-app-ddnsto
-  - luci-app-nlbwmon
   - luci-app-passwall
-  - luci-app-ramfree
-  - luci-app-serverchan
-  - luci-app-unblockmusic
-  - luci-app-unblockneteasemusic-go
-  - luci-app-unblockneteasemusic
-  - luci-app-upnp
-  - luci-app-vlmcsd
-  - luci-app-wol
-  - luci-app-wrtbwmon
   - openssh-sftp-server
   - luci-compat
