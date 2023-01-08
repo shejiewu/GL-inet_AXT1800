@@ -12,11 +12,6 @@ module.exports = [
     branch: 'openwrt-21.02',
   },
   {
-    name: 'NueXini_Packages',
-    uri: 'https://github.com/NueXini/NueXini_Packages.git',
-    branch: 'main',
-  },
-  {
     name: 'kiddin9',
     uri: 'https://github.com/kiddin9/openwrt-packages.git',
     branch: 'master',
