@@ -18,11 +18,11 @@ feeds:
   - name: immortalwrt_luci
     uri: https://github.com/immortalwrt/luci.git
     branch: openwrt-21.02
-    revision: 4f73e7a5e411da71a6ccc5863156995216cc060f
+    revision: 37c9af4b95dc1a4fbbc1ae62e9c3b97251cba477
   - name: kiddin9
     uri: https://github.com/kiddin9/openwrt-packages.git
     branch: master
-    revision: 5ae00aa27cd20b4adddd4a21ed94f1dc05ddf0a3
+    revision: f660ebd32f8090350fcc232dd274ff4cf83a12ac
 include: []
 packages:
   - kmod-hwmon-pwmfan
