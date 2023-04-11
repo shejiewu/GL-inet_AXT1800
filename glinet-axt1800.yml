@@ -25,7 +25,7 @@ feeds:
   - name: kiddin9
     uri: https://github.com/kiddin9/openwrt-packages.git
     branch: master
-    revision: 51c9ebb28fa5a4b985e0e427b6a5b81247965b32
+    revision: 43c5648f2eef1757e50765c8124368d45496cc94
 include: []
 packages:
   - kmod-hwmon-pwmfan
@@ -33,9 +33,13 @@ packages:
   - wireless-regdb
   - wget-ssl
   - kmod-wireguard-backport
+  - wpad-openssl
   - luci-theme-argon
   - luci-app-argon-config
   - luci-app-ddnsto
   - luci-app-passwall
   - openssh-sftp-server
   - luci-compat
+diffconfig: |
+  CONFIG_PACKAGE_wpad-basic=n
+  CONFIG_PACKAGE_wpad=n
