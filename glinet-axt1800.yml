@@ -21,7 +21,7 @@ feeds:
   - name: immortalwrt_luci
     uri: https://github.com/immortalwrt/luci.git
     branch: openwrt-21.02
-    revision: c60932088940c0cc83b0b28eafa376bcc50873a4
+    revision: 8b0009e76d24dbd2ce7ab9028d33153a3f6c7eab
   - name: kiddin9
     uri: https://github.com/kiddin9/openwrt-packages.git
     branch: master
