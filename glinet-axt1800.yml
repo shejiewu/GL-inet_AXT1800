@@ -25,7 +25,7 @@ feeds:
   - name: kiddin9
     uri: https://github.com/kiddin9/openwrt-packages.git
     branch: master
-    revision: efcfd20c64eef1887d313876bd4819060840a2a5
+    revision: 00bc06a7c6f642ac821430db5af04487b9aadd56
 include: []
 packages:
   - kmod-hwmon-pwmfan
